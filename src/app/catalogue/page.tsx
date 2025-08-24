@@ -20,7 +20,7 @@ export default function CataloguePage() {
 
       <Tabs defaultValue="Tous" className="w-full">
         <div className="flex justify-center mb-8">
-            <TabsList>
+            <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 h-auto">
                 {categories.map(category => (
                     <TabsTrigger key={category} value={category}>{category}</TabsTrigger>
                 ))}

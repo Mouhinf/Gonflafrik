@@ -8,7 +8,7 @@ export const inflatableCatalogue: Inflatable[] = [
     image: 'https://placehold.co/600x400.png',
     ageSuitability: '3-8 ans',
     features: ['Toboggan intégré', 'Zone de saut spacieuse', 'Filets de sécurité'],
-    category: 'Châteaux',
+    category: 'Structures ludiques',
     hint: 'pink castle'
   },
   {
@@ -18,7 +18,7 @@ export const inflatableCatalogue: Inflatable[] = [
     image: 'https://placehold.co/600x400.png',
     ageSuitability: '5-12 ans',
     features: ['Tunnel', 'Mur d\'escalade', 'Double toboggan', 'Obstacles pop-up'],
-    category: 'Parcours',
+    category: 'Structures ludiques',
     hint: 'jungle obstacle course'
   },
   {
@@ -28,7 +28,7 @@ export const inflatableCatalogue: Inflatable[] = [
     image: 'https://placehold.co/600x400.png',
     ageSuitability: '6 ans et +',
     features: ['Haute glissade', 'Thème immersif', 'Zone d\'arrivée sécurisée'],
-    category: 'Toboggans',
+    category: 'Structures aquatiques',
     hint: 'pirate ship slide'
   },
   {
@@ -38,7 +38,7 @@ export const inflatableCatalogue: Inflatable[] = [
     image: 'https://placehold.co/600x400.png',
     ageSuitability: '4-10 ans',
     features: ['Panier de basket', 'Formes de dinosaures 3D', 'Grande zone de rebond'],
-    category: 'Châteaux',
+    category: 'Structures ludiques',
     hint: 'dinosaur bouncy'
   },
   {
@@ -48,7 +48,7 @@ export const inflatableCatalogue: Inflatable[] = [
     image: 'https://placehold.co/600x400.png',
     ageSuitability: '3-7 ans',
     features: ['Design coloré', 'Petits obstacles', 'Idéal pour les tout-petits'],
-    category: 'Châteaux',
+    category: 'Structures ludiques',
     hint: 'race car'
   },
   {
@@ -58,9 +58,29 @@ export const inflatableCatalogue: Inflatable[] = [
     image: 'https://placehold.co/600x400.png',
     ageSuitability: '5 ans et +',
     features: ['Piscine d\'arrivée', 'Système de pulvérisation d\'eau', 'Vinyle anti-dérapant'],
-    category: 'Toboggans',
+    category: 'Structures aquatiques',
     hint: 'water slide'
   },
+  {
+    id: 'tente-reception',
+    name: 'Dôme de Réception Élégant',
+    description: 'Une tente gonflable spacieuse et chic pour vos mariages, baptêmes ou événements corporatifs.',
+    image: 'https://placehold.co/600x400.png',
+    ageSuitability: 'Tous âges',
+    features: ['Design moderne', 'Modulable', 'Fenêtres panoramiques'],
+    category: 'Structures pour événements',
+    hint: 'inflatable dome'
+  },
+  {
+    id: 'arche-evenementielle',
+    name: 'Arche de Bienvenue',
+    description: 'Accueillez vos invités avec style grâce à cette arche gonflable personnalisable.',
+    image: 'https://placehold.co/600x400.png',
+    ageSuitability: 'Tous âges',
+    features: ['Entièrement personnalisable', 'Installation rapide', 'Idéal pour les départs de course'],
+    category: 'Structures promotionnelles',
+    hint: 'inflatable arch'
+  }
 ];
 
 export const featuredInflatables = inflatableCatalogue.slice(0, 3);

@@ -5,7 +5,7 @@ export interface Inflatable {
   image: string;
   ageSuitability: string;
   features: string[];
-  category: 'Châteaux' | 'Parcours' | 'Toboggans';
+  category: 'Structures ludiques' | 'Structures aquatiques' | 'Structures pour événements' | 'Structures promotionnelles';
   hint: string;
 }
 
