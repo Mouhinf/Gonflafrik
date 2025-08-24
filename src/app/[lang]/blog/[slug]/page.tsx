@@ -35,6 +35,8 @@ export default async function BlogPostPage({ params }: { params: { slug: string,
     title: t[postData.titleKey as keyof typeof t] || postData.titleKey,
     excerpt: t[postData.excerptKey as keyof typeof t] || postData.excerptKey,
     category: t[`category_${postData.categoryKey}` as keyof typeof t] || postData.categoryKey,
+    content: t[postData.contentKey as keyof typeof t] || postData.contentKey,
+    content2: t[postData.contentKey2 as keyof typeof t] || postData.contentKey2,
   };
 
 
@@ -83,10 +85,10 @@ export default async function BlogPostPage({ params }: { params: { slug: string,
             {/* The following is placeholder content. A real blog would source this from a CMS. */}
             <p className="lead text-xl text-muted-foreground">{post.excerpt}</p>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.
+                {post.content}
             </p>
             <p>
-                Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam.
+                {post.content2}
             </p>
             <h3 className="font-headline text-3xl mt-12 mb-4 !text-foreground">Un sous-titre pour l'exemple</h3>
             <p>
