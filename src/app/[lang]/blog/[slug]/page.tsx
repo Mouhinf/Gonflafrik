@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Locale, i18n } from '../../../../../i18n-config';
+import { getDictionary } from '@/dictionaries';
 
 // This function can be used by Next.js to generate static pages for each blog post at build time.
 export async function generateStaticParams() {
@@ -19,12 +20,22 @@ export async function generateStaticParams() {
   return paths;
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string, lang: Locale } }) {
+export default async function BlogPostPage({ params }: { params: { slug: string, lang: Locale } }) {
+  const dictionary = await getDictionary(params.lang);
+  const t = dictionary.BlogPage;
+
   const post = blogPosts.find((p) => p.slug === params.slug);
 
   if (!post) {
     notFound();
   }
+
+  const postDate = new Date(post.date);
+  const formattedDate = !isNaN(postDate.getTime()) ? postDate.toLocaleDateString(params.lang, {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+  }) : 'Invalid Date';
 
   return (
     <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8 max-w-4xl">
@@ -32,7 +43,7 @@ export default function BlogPostPage({ params }: { params: { slug: string, lang:
         <Button variant="ghost" asChild>
           <Link href={`/${params.lang}/blog`} className="inline-flex items-center text-primary hover:text-primary/90">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Retour au blog
+            {t.back_to_blog}
           </Link>
         </Button>
       </div>
@@ -44,11 +55,7 @@ export default function BlogPostPage({ params }: { params: { slug: string, lang:
             <div className="flex justify-center items-center gap-2 text-muted-foreground text-sm">
                 <Calendar className="h-4 w-4" />
                 <time dateTime={post.date}>
-                    Publié le {new Date(post.date).toLocaleDateString('fr-FR', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric',
-                    })}
+                    {t.published_on} {formattedDate}
                 </time>
             </div>
         </header>

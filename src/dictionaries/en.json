@@ -48,6 +48,21 @@
         "title": "Gallery of Unforgettable Moments",
         "subtitle": "Immerse yourself in the joyful world of GONFL'AFRIK. Each image captures a burst of laughter, a leap of joy, and a precious memory."
     },
+    "BlogPage": {
+        "title": "Our Blog",
+        "subtitle": "Tips, news, and fun stories. Everything you need to know about the world of inflatables is here.",
+        "search_placeholder": "Search for an article...",
+        "category_placeholder": "Category",
+        "sort_placeholder": "Sort by",
+        "sort_newest": "Newest",
+        "sort_oldest": "Oldest",
+        "no_posts_title": "No articles found",
+        "no_posts_subtitle": "Try adjusting your search filters.",
+        "back_to_blog": "Back to blog",
+        "published_on": "Published on",
+        "read_more": "Read more",
+        "all_category": "All"
+    },
     "Inflatables": {
         "chateau_princesse_name": "Princess Castle",
         "chateau_princesse_desc": "A magnificent pink castle for aspiring princesses. Perfect for fairytale birthdays.",

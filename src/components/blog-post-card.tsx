@@ -4,13 +4,22 @@ import type { BlogPost } from '@/lib/types';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Calendar } from 'lucide-react';
-import { usePathname } from 'next/navigation';
-import { i18n } from '../../i18n-config';
+import { Locale } from '../../i18n-config';
+import { useDictionary } from '@/hooks/use-dictionary';
 
 
-export function BlogPostCard({ post }: { post: BlogPost }) {
-  const pathname = usePathname();
-  const lang = pathname.split('/')[1] || i18n.defaultLocale;
+export function BlogPostCard({ post, lang }: { post: BlogPost, lang: Locale }) {
+  const dictionary = useDictionary(lang);
+  const t = dictionary?.BlogPage;
+
+  if (!t) return null;
+  
+  const postDate = new Date(post.date);
+  const formattedDate = !isNaN(postDate.getTime()) ? postDate.toLocaleDateString(lang, {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+  }) : 'Invalid Date';
 
   return (
     <Link href={`/${lang}/blog/${post.slug}`} className="group">
@@ -35,15 +44,11 @@ export function BlogPostCard({ post }: { post: BlogPost }) {
             <div className='flex items-center gap-2'>
                 <Calendar className="h-4 w-4" />
                 <time dateTime={post.date}>
-                    {new Date(post.date).toLocaleDateString('fr-FR', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric',
-                    })}
+                    {formattedDate}
                 </time>
             </div>
             <div className="flex items-center gap-1 text-primary font-semibold">
-                Lire plus <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                {t.read_more} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </div>
         </CardFooter>
       </Card>

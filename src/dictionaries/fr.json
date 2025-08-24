@@ -48,6 +48,21 @@
         "title": "Galerie des Moments Inoubliables",
         "subtitle": "Plongez dans l'univers joyeux de GONFL'AFRIK. Chaque image capture un éclat de rire, un saut de joie et un souvenir précieux."
     },
+    "BlogPage": {
+        "title": "Notre Blog",
+        "subtitle": "Conseils, actualités et histoires amusantes. Tout ce que vous devez savoir sur le monde des structures gonflables se trouve ici.",
+        "search_placeholder": "Rechercher un article...",
+        "category_placeholder": "Catégorie",
+        "sort_placeholder": "Trier par",
+        "sort_newest": "Plus récent",
+        "sort_oldest": "Plus ancien",
+        "no_posts_title": "Aucun article trouvé",
+        "no_posts_subtitle": "Essayez d'ajuster vos filtres de recherche.",
+        "back_to_blog": "Retour au blog",
+        "published_on": "Publié le",
+        "read_more": "Lire plus",
+        "all_category": "Tous"
+    },
     "Inflatables": {
         "chateau_princesse_name": "Château de Princesse",
         "chateau_princesse_desc": "Un magnifique château rose pour les princesses en herbe. Parfait pour les anniversaires féériques.",
