@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -9,15 +10,19 @@ import { featuredInflatables, galleryImages } from '@/lib/data';
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="relative h-[70vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
-        <Image
-          src="https://placehold.co/1800x900.png"
-          alt="Structures gonflables sous un ciel ensoleillé"
-          fill
-          className="object-cover absolute z-0"
-          data-ai-hint="bouncy castle festival"
-          priority
-        />
+      <section className="relative h-[70vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white overflow-hidden">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          className="absolute z-0 w-full h-full object-cover"
+          poster="https://placehold.co/1800x900.png"
+        >
+          {/* Vous pouvez ajouter la source de votre vidéo ici, par exemple :
+          <source src="/videos/hero-video.mp4" type="video/mp4" /> 
+          */}
+        </video>
         <div className="absolute inset-0 bg-black/50 z-10" />
         <div className="relative z-20 p-4 flex flex-col items-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold font-headline mb-4 drop-shadow-lg">
