@@ -22,14 +22,44 @@ export const inflatableCatalogue: Inflatable[] = [
     hint: 'jungle obstacle course'
   },
   {
-    id: 'toboggan-pirate',
-    name: 'Toboggan Géant Pirate',
-    description: 'Hissez les voiles pour une glissade vertigineuse sur notre toboggan pirate.',
+    id: 'toboggan-aquatique',
+    name: '💦 Toboggan aquatique gonflable',
+    description: 'Un classique incontournable ! Les enfants comme les adultes profitent de sensations fortes en glissant le long du toboggan pour atterrir dans une zone sécurisée. Idéal pour rafraîchir vos événements sous le soleil.',
     image: 'https://placehold.co/600x400.png',
     ageSuitability: '6 ans et +',
-    features: ['Haute glissade', 'Thème immersif', 'Zone d\'arrivée sécurisée'],
-    category: 'Structures aquatiques et toboggans',
-    hint: 'pirate ship slide'
+    features: ['Haute glissade', 'Zone d\'arrivée sécurisée', 'Rafraîchissant'],
+    category: 'Structures aquatiques',
+    hint: 'water slide splash'
+  },
+  {
+    id: 'piste-glisse',
+    name: '💦 Piste de glisse (Slip & Slide)',
+    description: 'Une longue piste arrosée d’eau qui permet de glisser à toute vitesse. Parfaite pour les compétitions amicales et les fous rires garantis entre amis ou en famille.',
+    image: 'https://placehold.co/600x400.png',
+    ageSuitability: '5 ans et +',
+    features: ['Longue piste', 'Compétitions amicales', 'Fous rires garantis'],
+    category: 'Structures aquatiques',
+    hint: 'slip and slide'
+  },
+  {
+    id: 'parc-aquatique',
+    name: '🏝️ Parc aquatique gonflable',
+    description: 'Un véritable terrain de jeu flottant composé de modules variés : obstacles, passerelles, trampolines et toboggans. À installer sur une piscine ou un plan d’eau pour une expérience inoubliable.',
+    image: 'https://placehold.co/600x400.png',
+    ageSuitability: '8 ans et +',
+    features: ['Modulaire', 'Pour piscine ou plan d\'eau', 'Expérience inoubliable'],
+    category: 'Structures aquatiques',
+    hint: 'floating water park'
+  },
+  {
+    id: 'combo-aquatique',
+    name: '🏖️ Combo aquatique (Château + Toboggan + Piscine)',
+    description: 'Une structure polyvalente qui combine aire de jeu, glissade et bassin d’eau. Adaptée aux enfants, elle réunit en un seul espace amusement et fraîcheur.',
+    image: 'https://placehold.co/600x400.png',
+    ageSuitability: '3-10 ans',
+    features: ['Polyvalent', 'Aire de jeu', 'Bassin d\'eau'],
+    category: 'Structures aquatiques',
+    hint: 'water combo bouncer'
   },
   {
     id: 'monde-dinosaures',
@@ -50,16 +80,6 @@ export const inflatableCatalogue: Inflatable[] = [
     features: ['Design coloré', 'Petits obstacles', 'Idéal pour les tout-petits'],
     category: 'Structures ludiques',
     hint: 'race car'
-  },
-  {
-    id: 'toboggan-aquatique',
-    name: 'Toboggan Aquatique Splash',
-    description: 'Le meilleur moyen de se rafraîchir en été. Se connecte à un tuyau d\'arrosage.',
-    image: 'https://placehold.co/600x400.png',
-    ageSuitability: '5 ans et +',
-    features: ['Piscine d\'arrivée', 'Système de pulvérisation d\'eau', 'Vinyle anti-dérapant'],
-    category: 'Structures aquatiques et toboggans',
-    hint: 'water slide'
   },
   {
     id: 'tente-reception',
