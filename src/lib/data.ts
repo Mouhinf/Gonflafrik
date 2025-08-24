@@ -28,7 +28,7 @@ export const inflatableCatalogue: Inflatable[] = [
     image: 'https://placehold.co/600x400.png',
     ageSuitability: '6 ans et +',
     features: ['Haute glissade', 'Thème immersif', 'Zone d\'arrivée sécurisée'],
-    category: 'Structures aquatiques',
+    category: 'Structures aquatiques et toboggans',
     hint: 'pirate ship slide'
   },
   {
@@ -58,7 +58,7 @@ export const inflatableCatalogue: Inflatable[] = [
     image: 'https://placehold.co/600x400.png',
     ageSuitability: '5 ans et +',
     features: ['Piscine d\'arrivée', 'Système de pulvérisation d\'eau', 'Vinyle anti-dérapant'],
-    category: 'Structures aquatiques',
+    category: 'Structures aquatiques et toboggans',
     hint: 'water slide'
   },
   {
