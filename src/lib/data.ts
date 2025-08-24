@@ -110,6 +110,16 @@ export const inflatableCatalogue: Inflatable[] = [
     features: ['Installation rapide', 'Grande surface de projection', 'Sac de transport inclus'],
     category: 'Structures pour événements',
     hint: 'inflatable screen'
+  },
+  {
+    id: 'mascotte-publicitaire',
+    name: 'Mascotte Publicitaire Gonflable',
+    description: 'Une mascotte géante à l\'image de votre marque pour attirer l\'attention lors de salons ou d\'opérations marketing.',
+    image: 'https://placehold.co/600x400.png',
+    ageSuitability: 'Tous âges',
+    features: ['Haute visibilité', 'Personnalisable', 'Impact fort'],
+    category: 'Structures promotionnelles',
+    hint: 'inflatable mascot'
   }
 ];
 
