@@ -1,4 +1,4 @@
 import { config } from 'dotenv';
 config();
 
-import '@/ai/flows/suggest-inflatable-configurations.ts';
+import './flows/suggest-inflatable-configurations.ts';

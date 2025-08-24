@@ -1,10 +1,10 @@
 'use server';
 /**
- * @fileOverview An AI tool to suggest optimal inflatable configurations and combinations based on event type, age group, and space dimensions.
+ * @fileOverview Un outil d'IA pour suggérer des configurations et des combinaisons de structures gonflables optimales en fonction du type d'événement, du groupe d'âge et des dimensions de l'espace.
  *
- * - suggestInflatableConfigurations - A function that handles the inflatable configuration suggestion process.
- * - SuggestInflatableConfigurationsInput - The input type for the suggestInflatableConfigurations function.
- * - SuggestInflatableConfigurationsOutput - The return type for the suggestInflatableConfigurations function.
+ * - suggestInflatableConfigurations - Une fonction qui gère le processus de suggestion de configuration de structure gonflable.
+ * - SuggestInflatableConfigurationsInput - Le type d'entrée pour la fonction suggestInflatableConfigurations.
+ * - SuggestInflatableConfigurationsOutput - Le type de retour pour la fonction suggestInflatableConfigurations.
  */
 
 import {ai} from '@/ai/genkit';
@@ -13,31 +13,31 @@ import {z} from 'genkit';
 const SuggestInflatableConfigurationsInputSchema = z.object({
   eventType: z
     .string()
-    .describe('The type of event (e.g., birthday party, corporate event, school fair).'),
+    .describe("Le type d'événement (par exemple, fête d'anniversaire, événement d'entreprise, kermesse d'école)."),
   ageGroup: z
     .string()
-    .describe('The age group of the participants (e.g., children, teenagers, adults, mixed).'),
+    .describe("Le groupe d'âge des participants (par exemple, enfants, adolescents, adultes, mixte)."),
   spaceDimensions: z
     .string()
-    .describe('The dimensions of the space available for the inflatable structures (e.g., 20x30 feet, large backyard, indoor gymnasium).'),
+    .describe("Les dimensions de l'espace disponible pour les structures gonflables (par exemple, 20x30 mètres, grand jardin, gymnase intérieur)."),
   additionalDetails: z
     .string()
     .optional()
-    .describe('Any additional details or preferences for the inflatable configurations.'),
+    .describe('Tous détails ou préférences supplémentaires pour les configurations de structures gonflables.'),
 });
 export type SuggestInflatableConfigurationsInput = z.infer<typeof SuggestInflatableConfigurationsInputSchema>;
 
 const SuggestInflatableConfigurationsOutputSchema = z.object({
   suggestedConfigurations: z
     .string()
-    .describe('A detailed description of the suggested inflatable configurations and combinations, including specific types of inflatables and their arrangement.'),
+    .describe('Une description détaillée des configurations et combinaisons de structures gonflables suggérées, y compris les types spécifiques de structures gonflables et leur agencement.'),
   suitabilityExplanation: z
     .string()
-    .describe('An explanation of why the suggested configurations are suitable for the given event type, age group, and space dimensions.'),
+    .describe("Une explication de la raison pour laquelle les configurations suggérées sont adaptées au type d'événement, au groupe d'âge et aux dimensions de l'espace donnés."),
   estimatedCost: z
     .string()
     .optional()
-    .describe('An estimate of the total cost for renting the suggested inflatable configurations.'),
+    .describe('Une estimation du coût total de la location des configurations de structures gonflables suggérées.'),
 });
 export type SuggestInflatableConfigurationsOutput = z.infer<typeof SuggestInflatableConfigurationsOutputSchema>;
 
@@ -51,16 +51,16 @@ const prompt = ai.definePrompt({
   name: 'suggestInflatableConfigurationsPrompt',
   input: {schema: SuggestInflatableConfigurationsInputSchema},
   output: {schema: SuggestInflatableConfigurationsOutputSchema},
-  prompt: `You are an expert event planner specializing in inflatable structures.
+  prompt: `Vous êtes un organisateur d'événements expert spécialisé dans les structures gonflables.
 
-  Based on the event type, age group, and space dimensions provided, suggest optimal inflatable configurations and combinations.
+  En fonction du type d'événement, du groupe d'âge et des dimensions de l'espace fournis, suggérez des configurations et des combinaisons de structures gonflables optimales.
 
-  Event Type: {{{eventType}}}
-  Age Group: {{{ageGroup}}}
-  Space Dimensions: {{{spaceDimensions}}}
-  Additional Details: {{{additionalDetails}}}
+  Type d'événement : {{{eventType}}}
+  Groupe d'âge : {{{ageGroup}}}
+  Dimensions de l'espace : {{{spaceDimensions}}}
+  Détails supplémentaires : {{{additionalDetails}}}
 
-  Provide a detailed description of the suggested configurations, explain why they are suitable, and estimate the total cost.
+  Fournissez une description détaillée des configurations suggérées, expliquez pourquoi elles sont adaptées et estimez le coût total. Répondez uniquement en français.
 `,
 });
 
