@@ -1,11 +1,11 @@
 export interface Inflatable {
   id: string;
-  name: string;
-  description: string;
+  name: string; // This will now be a key for dictionary lookup
+  description: string; // This will now be a key for dictionary lookup
   image: string;
-  ageSuitability: string;
-  features: string[];
-  category: 'Structures ludiques' | 'Structures aquatiques' | 'Structures pour événements' | 'Structures promotionnelles';
+  ageSuitability: string; // This will now be a key for dictionary lookup
+  features: string[]; // These can also be keys if needed, but for now let's keep them
+  category: 'ludiques' | 'aquatiques' | 'evenements' | 'promotionnelles';
   hint: string;
 }
 

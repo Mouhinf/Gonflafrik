@@ -8,6 +8,9 @@ import { featuredInflatables, galleryImages } from '@/lib/data';
 import type { Locale } from '../../../i18n-config';
 
 export default function HomePage({ dictionary, lang }: { dictionary: any, lang: Locale }) {
+  const t = dictionary.HomePage;
+  const ti = dictionary.Inflatables;
+
   return (
     <div className="flex flex-col">
       <section className="relative h-[70vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white overflow-hidden">
@@ -26,17 +29,17 @@ export default function HomePage({ dictionary, lang }: { dictionary: any, lang: 
         <div className="absolute inset-0 bg-black/50 z-10" />
         <div className="relative z-20 p-4 flex flex-col items-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold font-headline mb-4 drop-shadow-lg">
-            {dictionary.hero.title} <span className="text-primary">GONFL'AFRIK</span>!
+            {t.hero.title} <span className="text-primary">GONFL'AFRIK</span>!
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mb-8 drop-shadow-md">
-            {dictionary.hero.subtitle}
+            {t.hero.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold">
-              <Link href={`/${lang}/catalogue`}>{dictionary.hero.cta_catalogue} <ArrowRight className="ml-2" /></Link>
+              <Link href={`/${lang}/catalogue`}>{t.hero.cta_catalogue} <ArrowRight className="ml-2" /></Link>
             </Button>
             <Button asChild size="lg" variant="secondary" className="font-bold">
-              <Link href={`/${lang}/reservation`}>{dictionary.hero.cta_reserve}</Link>
+              <Link href={`/${lang}/reservation`}>{t.hero.cta_reserve}</Link>
             </Button>
           </div>
         </div>
@@ -45,9 +48,9 @@ export default function HomePage({ dictionary, lang }: { dictionary: any, lang: 
       <section id="features" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline">{dictionary.features.title}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-headline">{t.features.title}</h2>
             <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
-              {dictionary.features.subtitle}
+              {t.features.subtitle}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -56,10 +59,10 @@ export default function HomePage({ dictionary, lang }: { dictionary: any, lang: 
                 <div className="mx-auto bg-primary/20 rounded-full p-4 w-fit">
                   <Castle className="h-10 w-10 text-primary" />
                 </div>
-                <CardTitle className="font-headline mt-4">{dictionary.features.quality_title}</CardTitle>
+                <CardTitle className="font-headline mt-4">{t.features.quality_title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>{dictionary.features.quality_text}</p>
+                <p>{t.features.quality_text}</p>
               </CardContent>
             </Card>
             <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow">
@@ -67,10 +70,10 @@ export default function HomePage({ dictionary, lang }: { dictionary: any, lang: 
                 <div className="mx-auto bg-primary/20 rounded-full p-4 w-fit">
                   <PartyPopper className="h-10 w-10 text-primary" />
                 </div>
-                <CardTitle className="font-headline mt-4">{dictionary.features.service_title}</CardTitle>
+                <CardTitle className="font-headline mt-4">{t.features.service_title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>{dictionary.features.service_text}</p>
+                <p>{t.features.service_text}</p>
               </CardContent>
             </Card>
             <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow">
@@ -78,10 +81,10 @@ export default function HomePage({ dictionary, lang }: { dictionary: any, lang: 
                 <div className="mx-auto bg-primary/20 rounded-full p-4 w-fit">
                   <Bot className="h-10 w-10 text-primary" />
                 </div>
-                <CardTitle className="font-headline mt-4">{dictionary.features.planning_title}</CardTitle>
+                <CardTitle className="font-headline mt-4">{t.features.planning_title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>{dictionary.features.planning_text}</p>
+                <p>{t.features.planning_text}</p>
               </CardContent>
             </Card>
           </div>
@@ -91,19 +94,19 @@ export default function HomePage({ dictionary, lang }: { dictionary: any, lang: 
       <section id="featured-inflatables" className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline">{dictionary.featured_inflatables.title}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-headline">{t.featured_inflatables.title}</h2>
             <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
-              {dictionary.featured_inflatables.subtitle}
+              {t.featured_inflatables.subtitle}
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredInflatables.map((inflatable) => (
-              <InflatableCard key={inflatable.id} inflatable={inflatable} lang={lang} />
+              <InflatableCard key={inflatable.id} inflatable={inflatable} lang={lang} dictionary={ti} />
             ))}
           </div>
           <div className="text-center mt-12">
             <Button asChild size="lg" variant="outline">
-              <Link href={`/${lang}/catalogue`}>{dictionary.featured_inflatables.cta_explore} <ArrowRight className="ml-2" /></Link>
+              <Link href={`/${lang}/catalogue`}>{t.featured_inflatables.cta_explore} <ArrowRight className="ml-2" /></Link>
             </Button>
           </div>
         </div>
@@ -123,12 +126,12 @@ export default function HomePage({ dictionary, lang }: { dictionary: any, lang: 
               />
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">{dictionary.about_us.title}</h2>
+              <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">{t.about_us.title}</h2>
               <p className="text-muted-foreground mb-6">
-                {dictionary.about_us.text}
+                {t.about_us.text}
               </p>
               <Button asChild size="lg">
-                <Link href={`/${lang}/a-propos`}>{dictionary.about_us.cta_learn_more} <Building className="ml-2" /></Link>
+                <Link href={`/${lang}/a-propos`}>{t.about_us.cta_learn_more} <Building className="ml-2" /></Link>
               </Button>
             </div>
           </div>
@@ -139,12 +142,12 @@ export default function HomePage({ dictionary, lang }: { dictionary: any, lang: 
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
-              <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">{dictionary.ai_planner.title}</h2>
+              <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">{t.ai_planner.title}</h2>
               <p className="text-muted-foreground mb-6">
-                {dictionary.ai_planner.text}
+                {t.ai_planner.text}
               </p>
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                <Link href={`/${lang}/planificateur-ia`}>{dictionary.ai_planner.cta_try_planner} <Bot className="ml-2" /></Link>
+                <Link href={`/${lang}/planificateur-ia`}>{t.ai_planner.cta_try_planner} <Bot className="ml-2" /></Link>
               </Button>
             </div>
             <div className="order-1 md:order-2">
@@ -164,9 +167,9 @@ export default function HomePage({ dictionary, lang }: { dictionary: any, lang: 
       <section id="gallery-preview" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline">{dictionary.gallery_preview.title}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-headline">{t.gallery_preview.title}</h2>
             <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
-              {dictionary.gallery_preview.subtitle}
+              {t.gallery_preview.subtitle}
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -185,7 +188,7 @@ export default function HomePage({ dictionary, lang }: { dictionary: any, lang: 
           </div>
           <div className="text-center mt-12">
             <Button asChild size="lg">
-              <Link href={`/${lang}/galerie`}>{dictionary.gallery_preview.cta_visit_gallery} <ArrowRight className="ml-2" /></Link>
+              <Link href={`/${lang}/galerie`}>{t.gallery_preview.cta_visit_gallery} <ArrowRight className="ml-2" /></Link>
             </Button>
           </div>
         </div>
