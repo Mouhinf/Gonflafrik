@@ -13,39 +13,41 @@ import {
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { i18n, type Locale } from '../../../i18n-config';
+import { useDictionary } from '@/hooks/use-dictionary';
 
-const navLinks = [
-  { href: '/catalogue', label: 'Catalogue' },
-  { href: '/galerie', label: 'Galerie' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/planificateur-ia', label: 'Planificateur IA' },
-  { href: '/a-propos', label: 'À propos' },
-  { href: '/contact', label: 'Contact' },
-];
-
-function NavLink({ href, label, className, lang }: { href: string; label: string; className?: string, lang: Locale }) {
-  const pathname = usePathname();
-  // Vérifie si le chemin commence par le href de la langue
-  const isActive = pathname === `/${lang}${href}` || (href === '/catalogue' && pathname === `/${lang}`);
-
-
-  return (
-    <Link
-      href={`/${lang}${href}`}
-      className={cn(
-        "transition-colors hover:text-primary",
-        isActive ? "text-primary font-semibold" : "",
-        className
-      )}
-    >
-      {label}
-    </Link>
-  );
-}
 
 export default function Header() {
   const pathname = usePathname();
   const lang = (pathname.split('/')[1] as Locale) || i18n.defaultLocale;
+  const dictionary = useDictionary(lang);
+  const t = dictionary?.Header;
+
+  const navLinks = [
+    { href: '/catalogue', labelKey: 'catalogue' },
+    { href: '/galerie', labelKey: 'gallery' },
+    { href: '/blog', labelKey: 'blog' },
+    { href: '/planificateur-ia', labelKey: 'ai_planner' },
+    { href: '/a-propos', labelKey: 'about' },
+    { href: '/contact', labelKey: 'contact' },
+  ];
+
+  function NavLink({ href, label, className }: { href: string; label: string; className?: string }) {
+    const pathname = usePathname();
+    const isActive = pathname === `/${lang}${href}` || (href === '/catalogue' && pathname === `/${lang}`);
+
+    return (
+      <Link
+        href={`/${lang}${href}`}
+        className={cn(
+          "transition-colors hover:text-primary",
+          isActive ? "text-primary font-semibold" : "",
+          className
+        )}
+      >
+        {label}
+      </Link>
+    );
+  }
   
   const redirectedPathName = (locale: Locale) => {
     if (!pathname) return `/${locale}`
@@ -53,6 +55,8 @@ export default function Header() {
     segments[1] = locale
     return segments.join('/')
   }
+
+  if (!t) return null;
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -63,7 +67,7 @@ export default function Header() {
         </Link>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
           {navLinks.map((link) => (
-            <NavLink key={link.href} {...link} lang={lang} />
+            <NavLink key={link.href} href={link.href} label={t[link.labelKey]} lang={lang} />
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-2 sm:space-x-4">
@@ -71,7 +75,7 @@ export default function Header() {
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Globe className="h-[1.2rem] w-[1.2rem]" />
-                <span className="sr-only">Changer de langue</span>
+                <span className="sr-only">{t.change_language}</span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
@@ -85,14 +89,14 @@ export default function Header() {
           </DropdownMenu>
 
           <Button asChild className="hidden md:inline-flex bg-accent hover:bg-accent/90 text-accent-foreground font-bold rounded-full px-6">
-            <Link href={`/${lang}/reservation`}>Réserver</Link>
+            <Link href={`/${lang}/reservation`}>{t.book_now}</Link>
           </Button>
 
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
                 <Menu className="h-6 w-6" />
-                <span className="sr-only">Ouvrir le menu</span>
+                <span className="sr-only">{t.open_menu}</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
@@ -103,12 +107,12 @@ export default function Header() {
                 </Link>
                 {navLinks.map((link) => (
                     <SheetClose key={link.href} asChild>
-                        <NavLink {...link} lang={lang} />
+                        <NavLink href={link.href} label={t[link.labelKey]} />
                     </SheetClose>
                 ))}
                 <SheetClose asChild>
                   <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold rounded-full px-6 mt-4">
-                    <Link href={`/${lang}/reservation`}>Réserver</Link>
+                    <Link href={`/${lang}/reservation`}>{t.book_now}</Link>
                   </Button>
                 </SheetClose>
               </nav>

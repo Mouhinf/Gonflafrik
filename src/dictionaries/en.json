@@ -1,5 +1,16 @@
 
 {
+    "Header": {
+        "catalogue": "Catalogue",
+        "gallery": "Gallery",
+        "blog": "Blog",
+        "ai_planner": "AI Planner",
+        "about": "About",
+        "contact": "Contact",
+        "book_now": "Book Now",
+        "change_language": "Change language",
+        "open_menu": "Open menu"
+    },
     "HomePage": {
         "hero": {
             "title": "The Party Starts Here with",
@@ -238,5 +249,3 @@
         "error_captcha_incorrect": "Incorrect answer."
     }
 }
-
-    

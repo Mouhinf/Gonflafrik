@@ -1,5 +1,16 @@
 
 {
+    "Header": {
+        "catalogue": "Catalogue",
+        "gallery": "Galerie",
+        "blog": "Blog",
+        "ai_planner": "Planificateur IA",
+        "about": "À propos",
+        "contact": "Contact",
+        "book_now": "Réserver",
+        "change_language": "Changer de langue",
+        "open_menu": "Ouvrir le menu"
+    },
     "HomePage": {
         "hero": {
             "title": "La Fête Commence Ici avec",
@@ -238,5 +249,3 @@
         "error_captcha_incorrect": "Réponse incorrecte."
     }
 }
-
-    
