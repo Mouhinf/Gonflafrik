@@ -6,7 +6,7 @@ import { blogPosts } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Locale, i18n } from '../../../../i18n-config';
+import { Locale, i18n } from '../../../../../i18n-config';
 
 // This function can be used by Next.js to generate static pages for each blog post at build time.
 export async function generateStaticParams() {

@@ -5,7 +5,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Users, ArrowRight } from 'lucide-react';
-import type { Locale } from '../../i18n-config';
+import type { Locale } from '../../../i18n-config';
 
 export function InflatableCard({ inflatable, lang }: { inflatable: Inflatable, lang: Locale }) {
   return (

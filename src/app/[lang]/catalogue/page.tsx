@@ -2,8 +2,9 @@
 import { inflatableCatalogue } from '@/lib/data';
 import { InflatableCard } from '@/components/inflatable-card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Locale } from '../../../../i18n-config';
 
-export default function CataloguePage() {
+export default function CataloguePage({ params: { lang } }: { params: { lang: Locale } }) {
   const categories = ['Tous', ...Array.from(new Set(inflatableCatalogue.map(item => item.category)))];
 
   return (
@@ -33,7 +34,7 @@ export default function CataloguePage() {
                     {inflatableCatalogue
                         .filter(item => category === 'Tous' || item.category === category)
                         .map(inflatable => (
-                            <InflatableCard key={inflatable.id} inflatable={inflatable} />
+                            <InflatableCard key={inflatable.id} inflatable={inflatable} lang={lang} />
                         ))
                     }
                 </div>
