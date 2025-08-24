@@ -72,14 +72,14 @@ export const inflatableCatalogue: Inflatable[] = [
     hint: 'dinosaur bouncy'
   },
   {
-    id: 'course-voitures',
-    name: 'Course de Voitures',
-    description: 'Prêt, partez, sautez ! Un château sur le thème de la course automobile.',
+    id: 'jeux-interactifs',
+    name: 'Jeux Interactif Gonflables',
+    description: 'Jeux interactifs comme le baby-foot humain, le mur velcro, les joutes, etc.',
     image: 'https://placehold.co/600x400.png',
-    ageSuitability: '3-7 ans',
-    features: ['Design coloré', 'Petits obstacles', 'Idéal pour les tout-petits'],
+    ageSuitability: '5 ans et +',
+    features: ['Baby-foot humain', 'Mur velcro', 'Joutes'],
     category: 'Structures ludiques',
-    hint: 'race car'
+    hint: 'interactive inflatable game'
   },
   {
     id: 'tente-reception',
