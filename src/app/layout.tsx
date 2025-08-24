@@ -1,12 +1,9 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
-import { i18n, type Locale } from '../../i18n-config';
-
-export async function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ lang: locale }))
-}
+import { i18n } from '../../i18n-config';
 
 export const metadata: Metadata = {
   title: 'GONFL\'AFRIK - Location de Structures Gonflables',
@@ -26,7 +23,9 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className={cn('min-h-screen bg-background font-body antialiased')}>
-        {children}
+        <div className="relative flex min-h-dvh flex-col">
+            {children}
+        </div>
         <Toaster />
       </body>
     </html>
