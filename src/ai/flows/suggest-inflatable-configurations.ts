@@ -37,7 +37,7 @@ const SuggestInflatableConfigurationsOutputSchema = z.object({
   estimatedCost: z
     .string()
     .optional()
-    .describe('Une estimation du coût total de la location des configurations de structures gonflables suggérées.'),
+    .describe('Une estimation du coût total en Francs CFA (XOF) pour la location des configurations de structures gonflables suggérées.'),
 });
 export type SuggestInflatableConfigurationsOutput = z.infer<typeof SuggestInflatableConfigurationsOutputSchema>;
 
@@ -60,7 +60,7 @@ const prompt = ai.definePrompt({
   Dimensions de l'espace : {{{spaceDimensions}}}
   Détails supplémentaires : {{{additionalDetails}}}
 
-  Fournissez une description détaillée des configurations suggérées, expliquez pourquoi elles sont adaptées et estimez le coût total. Répondez uniquement en français.
+  Fournissez une description détaillée des configurations suggérées, expliquez pourquoi elles sont adaptées et estimez le coût total en Francs CFA (XOF). Répondez uniquement en français.
 `,
 });
 
