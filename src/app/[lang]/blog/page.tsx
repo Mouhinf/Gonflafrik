@@ -8,27 +8,34 @@ import { Input } from '@/components/ui/input';
 import { Locale } from '../../../../i18n-config';
 import { useDictionary } from '@/hooks/use-dictionary';
 
-export default function BlogPage({ params: { lang } }: { params: { lang: Locale } }) {
+export default function BlogPage({ params }: { params: { lang: Locale } }) {
+  const { lang } = params;
   const dictionary = useDictionary(lang);
   const t = dictionary?.BlogPage;
 
   const [searchTerm, setSearchTerm] = useState('');
   const [category, setCategory] = useState('all');
   const [sortOrder, setSortOrder] = useState('desc');
+  
+  useEffect(() => {
+    if (t) {
+      setCategory(t.all_category);
+    }
+  }, [t]);
 
   const filteredAndSortedPosts = useMemo(() => {
     if (!t) return [];
     
     const translatedPosts = blogPosts.map(post => ({
       ...post,
-      title: t[post.titleKey] || post.titleKey,
-      excerpt: t[post.excerptKey] || post.excerptKey,
-      category: t[`category_${post.categoryKey}`] || post.categoryKey,
+      title: t[post.titleKey as keyof typeof t] || post.titleKey,
+      excerpt: t[post.excerptKey as keyof typeof t] || post.excerptKey,
+      category: t[`category_${post.categoryKey}` as keyof typeof t] || post.categoryKey,
     }));
     
     return translatedPosts
       .filter(post => 
-        (category === 'all' || post.category === category) &&
+        (category === 'all' || post.category === category || category === t.all_category) &&
         post.title.toLowerCase().includes(searchTerm.toLowerCase())
       )
       .sort((a, b) => {
@@ -64,7 +71,7 @@ export default function BlogPage({ params: { lang } }: { params: { lang: Locale 
               <SelectValue placeholder={t.category_placeholder} />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">{t.all_category}</SelectItem>
+              <SelectItem value={t.all_category}>{t.all_category}</SelectItem>
               {blogCategories.slice(1).map(catKey => (
                 <SelectItem key={catKey} value={t[`category_${catKey}`]}>{t[`category_${catKey}`]}</SelectItem>
               ))}
