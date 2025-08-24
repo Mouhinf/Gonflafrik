@@ -8,5 +8,5 @@ export default async function Home({
   params: { lang: Locale }
 }) {
   const dictionary = await getDictionary(lang)
-  return <HomePage dictionary={dictionary.HomePage} />;
+  return <HomePage dictionary={dictionary.HomePage} lang={lang} />;
 }

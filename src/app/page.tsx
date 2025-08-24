@@ -1,9 +1,9 @@
 
 import { redirect } from 'next/navigation';
+import { i18n } from '../i18n-config';
 
 export default function Home() {
-  // This is a temporary redirect to the default locale.
-  // In a real app, you'd want to detect the user's preferred locale from the request headers.
-  // The middleware is currently configured to handle this detection and redirection.
-  redirect('/fr');
+  // Redirection de la racine vers la langue par défaut.
+  // Le middleware se charge de la détection de la langue du navigateur pour les visites ultérieures.
+  redirect(i18n.defaultLocale);
 }

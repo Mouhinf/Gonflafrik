@@ -5,8 +5,9 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Users, ArrowRight } from 'lucide-react';
+import type { Locale } from '../../i18n-config';
 
-export function InflatableCard({ inflatable }: { inflatable: Inflatable }) {
+export function InflatableCard({ inflatable, lang }: { inflatable: Inflatable, lang: Locale }) {
   return (
     <Card className="flex flex-col overflow-hidden h-full transition-all duration-300 hover:shadow-primary/20 hover:shadow-xl hover:-translate-y-1">
       <CardHeader className="p-0">
@@ -34,7 +35,7 @@ export function InflatableCard({ inflatable }: { inflatable: Inflatable }) {
       </CardContent>
       <CardFooter>
         <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-          <Link href="/reservation">
+          <Link href={`/${lang}/reservation`}>
             Réserver maintenant <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>

@@ -6,15 +6,20 @@ import { blogPosts } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Locale, i18n } from '../../../../i18n-config';
 
 // This function can be used by Next.js to generate static pages for each blog post at build time.
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
-  }));
+  const paths = i18n.locales.flatMap((locale) => 
+    blogPosts.map((post) => ({
+      lang: locale,
+      slug: post.slug,
+    }))
+  );
+  return paths;
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
+export default function BlogPostPage({ params }: { params: { slug: string, lang: Locale } }) {
   const post = blogPosts.find((p) => p.slug === params.slug);
 
   if (!post) {
@@ -25,7 +30,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8 max-w-4xl">
       <div className="mb-8">
         <Button variant="ghost" asChild>
-          <Link href="/blog" className="inline-flex items-center text-primary hover:text-primary/90">
+          <Link href={`/${params.lang}/blog`} className="inline-flex items-center text-primary hover:text-primary/90">
             <ArrowLeft className="mr-2 h-4 w-4" />
             Retour au blog
           </Link>

@@ -25,7 +25,9 @@ const navLinks = [
 
 function NavLink({ href, label, className, lang }: { href: string; label: string; className?: string, lang: Locale }) {
   const pathname = usePathname();
-  const isActive = pathname === `/${lang}${href}`;
+  // Vérifie si le chemin commence par le href de la langue
+  const isActive = pathname === `/${lang}${href}` || (href === '/catalogue' && pathname === `/${lang}`);
+
 
   return (
     <Link
@@ -43,10 +45,10 @@ function NavLink({ href, label, className, lang }: { href: string; label: string
 
 export default function Header() {
   const pathname = usePathname();
-  const lang = pathname.split('/')[1] as Locale;
+  const lang = (pathname.split('/')[1] as Locale) || i18n.defaultLocale;
   
   const redirectedPathName = (locale: Locale) => {
-    if (!pathname) return '/'
+    if (!pathname) return `/${locale}`
     const segments = pathname.split('/')
     segments[1] = locale
     return segments.join('/')

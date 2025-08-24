@@ -5,8 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Castle, PartyPopper, Bot, Building } from 'lucide-react';
 import { InflatableCard } from '@/components/inflatable-card';
 import { featuredInflatables, galleryImages } from '@/lib/data';
+import type { Locale } from '../../../i18n-config';
 
-export default function HomePage({ dictionary }: { dictionary: any }) {
+export default function HomePage({ dictionary, lang }: { dictionary: any, lang: Locale }) {
   return (
     <div className="flex flex-col">
       <section className="relative h-[70vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white overflow-hidden">
@@ -32,10 +33,10 @@ export default function HomePage({ dictionary }: { dictionary: any }) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold">
-              <Link href="/catalogue">{dictionary.hero.cta_catalogue} <ArrowRight className="ml-2" /></Link>
+              <Link href={`/${lang}/catalogue`}>{dictionary.hero.cta_catalogue} <ArrowRight className="ml-2" /></Link>
             </Button>
             <Button asChild size="lg" variant="secondary" className="font-bold">
-              <Link href="/reservation">{dictionary.hero.cta_reserve}</Link>
+              <Link href={`/${lang}/reservation`}>{dictionary.hero.cta_reserve}</Link>
             </Button>
           </div>
         </div>
@@ -97,12 +98,12 @@ export default function HomePage({ dictionary }: { dictionary: any }) {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredInflatables.map((inflatable) => (
-              <InflatableCard key={inflatable.id} inflatable={inflatable} />
+              <InflatableCard key={inflatable.id} inflatable={inflatable} lang={lang} />
             ))}
           </div>
           <div className="text-center mt-12">
             <Button asChild size="lg" variant="outline">
-              <Link href="/catalogue">{dictionary.featured_inflatables.cta_explore} <ArrowRight className="ml-2" /></Link>
+              <Link href={`/${lang}/catalogue`}>{dictionary.featured_inflatables.cta_explore} <ArrowRight className="ml-2" /></Link>
             </Button>
           </div>
         </div>
@@ -127,7 +128,7 @@ export default function HomePage({ dictionary }: { dictionary: any }) {
                 {dictionary.about_us.text}
               </p>
               <Button asChild size="lg">
-                <Link href="/a-propos">{dictionary.about_us.cta_learn_more} <Building className="ml-2" /></Link>
+                <Link href={`/${lang}/a-propos`}>{dictionary.about_us.cta_learn_more} <Building className="ml-2" /></Link>
               </Button>
             </div>
           </div>
@@ -143,7 +144,7 @@ export default function HomePage({ dictionary }: { dictionary: any }) {
                 {dictionary.ai_planner.text}
               </p>
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                <Link href="/planificateur-ia">{dictionary.ai_planner.cta_try_planner} <Bot className="ml-2" /></Link>
+                <Link href={`/${lang}/planificateur-ia`}>{dictionary.ai_planner.cta_try_planner} <Bot className="ml-2" /></Link>
               </Button>
             </div>
             <div className="order-1 md:order-2">
@@ -184,7 +185,7 @@ export default function HomePage({ dictionary }: { dictionary: any }) {
           </div>
           <div className="text-center mt-12">
             <Button asChild size="lg">
-              <Link href="/galerie">{dictionary.gallery_preview.cta_visit_gallery} <ArrowRight className="ml-2" /></Link>
+              <Link href={`/${lang}/galerie`}>{dictionary.gallery_preview.cta_visit_gallery} <ArrowRight className="ml-2" /></Link>
             </Button>
           </div>
         </div>

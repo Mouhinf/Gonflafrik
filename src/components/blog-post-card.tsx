@@ -4,10 +4,16 @@ import type { BlogPost } from '@/lib/types';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Calendar } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+import { i18n } from '../../i18n-config';
+
 
 export function BlogPostCard({ post }: { post: BlogPost }) {
+  const pathname = usePathname();
+  const lang = pathname.split('/')[1] || i18n.defaultLocale;
+
   return (
-    <Link href={`/blog/${post.slug}`} className="group">
+    <Link href={`/${lang}/blog/${post.slug}`} className="group">
       <Card className="flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-primary/20 hover:shadow-xl hover:-translate-y-1">
         <CardHeader className="p-0">
           <div className="relative h-56 w-full">
