@@ -1,6 +1,7 @@
 
 import Link from 'next/link';
-import { Wind, Facebook, Instagram, Twitter } from 'lucide-react';
+import Image from 'next/image';
+import { Facebook, Instagram, Twitter } from 'lucide-react';
 import { getDictionary } from '@/dictionaries';
 import { Locale } from '../../../i18n-config';
 
@@ -14,7 +15,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <Link href={`/${lang}`} className="flex items-center space-x-2 mb-4">
-              <Wind className="h-8 w-8 text-primary" />
+              <Image src="https://placehold.co/40x40.png" alt="GONFL'AFRIK Logo" width={40} height={40} data-ai-hint="company logo" />
               <span className="text-2xl font-bold font-headline text-primary">GONFL'AFRIK</span>
             </Link>
             <p className="text-sm text-muted-foreground">{t.tagline}</p>
