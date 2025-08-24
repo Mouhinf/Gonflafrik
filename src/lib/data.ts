@@ -120,6 +120,26 @@ export const inflatableCatalogue: Inflatable[] = [
     features: ['Haute visibilité', 'Personnalisable', 'Impact fort'],
     category: 'Structures promotionnelles',
     hint: 'inflatable mascot'
+  },
+  {
+    id: 'dome-marque',
+    name: 'Dôme ou Tente de Marque',
+    description: 'Pour salons, expositions, activation de marque, et événements B2B.',
+    image: 'https://placehold.co/600x400.png',
+    ageSuitability: 'Tous âges',
+    features: ['Haute visibilité', 'Personnalisable', 'Idéal pour les salons'],
+    category: 'Structures promotionnelles',
+    hint: 'branded dome tent'
+  },
+  {
+    id: 'ecran-branding',
+    name: 'Écran Gonflable Branding',
+    description: 'Pour diffuser des contenus marketing dans des lieux extérieurs.',
+    image: 'https://placehold.co/600x400.png',
+    ageSuitability: 'Tous âges',
+    features: ['Large surface', 'Visibilité maximale', 'Idéal pour le marketing extérieur'],
+    category: 'Structures promotionnelles',
+    hint: 'branded inflatable screen'
   }
 ];
 
