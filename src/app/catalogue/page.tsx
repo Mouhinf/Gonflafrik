@@ -1,3 +1,4 @@
+
 import { inflatableCatalogue } from '@/lib/data';
 import { InflatableCard } from '@/components/inflatable-card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -9,6 +10,9 @@ export default function CataloguePage() {
     <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-extrabold font-headline">Notre Catalogue de Rêves</h1>
+        <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
+          Découvrez notre incroyable sélection de structures gonflables. Nous avons tout ce qu'il faut pour rendre votre fête inoubliable !
+        </p>
         <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
           Anniversaire, mariage, baptême, kermesse, dîner de gala, fête scolaire ou événement d’entreprise… quelle que soit l’occasion, nos structures gonflables apportent une touche unique d’animation, de divertissement et d’élégance. Avec GONFL’AFRIK, chaque instant devient inoubliable !
         </p>
