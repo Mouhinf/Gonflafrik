@@ -7,6 +7,16 @@ export default function AboutPage() {
   return (
     <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
+        <div className="flex justify-center mb-8">
+            <Image 
+                src="https://placehold.co/200x200.png" 
+                alt="Logo GONFL'AFRIK" 
+                width={150} 
+                height={150}
+                className="rounded-full"
+                data-ai-hint="company logo"
+            />
+        </div>
         <h1 className="text-4xl md:text-5xl font-extrabold font-headline">À Propos de <span className="text-primary">GONFL'AFRIK</span></h1>
         <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
           GONFL’AFRIK est une entreprise spécialisée dans la location, la vente et l’animation avec structures gonflables. Basée au Sénégal, notre mission est d’apporter de la joie, du divertissement et une touche d’originalité à tous types d’événements : anniversaires, mariages, baptêmes, kermesses, fêtes scolaires, événements d’entreprise, dîners de gala et bien plus encore.
