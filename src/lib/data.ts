@@ -98,8 +98,18 @@ export const inflatableCatalogue: Inflatable[] = [
     image: 'https://placehold.co/600x400.png',
     ageSuitability: 'Tous âges',
     features: ['Entièrement personnalisable', 'Installation rapide', 'Idéal pour les départs de course'],
-    category: 'Structures promotionnelles',
+    category: 'Structures pour événements',
     hint: 'inflatable arch'
+  },
+  {
+    id: 'ecran-projection',
+    name: 'Écran de Projection Gonflable',
+    description: 'Transformez n\'importe quel espace en cinéma de plein air. Idéal pour les soirées films ou les présentations.',
+    image: 'https://placehold.co/600x400.png',
+    ageSuitability: 'Tous âges',
+    features: ['Installation rapide', 'Grande surface de projection', 'Sac de transport inclus'],
+    category: 'Structures pour événements',
+    hint: 'inflatable screen'
   }
 ];
 
