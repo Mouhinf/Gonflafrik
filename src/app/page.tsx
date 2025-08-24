@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Castle, PartyPopper, Bot } from 'lucide-react';
+import { ArrowRight, Castle, PartyPopper, Bot, Building } from 'lucide-react';
 import { InflatableCard } from '@/components/inflatable-card';
 import { featuredInflatables, galleryImages } from '@/lib/data';
 
@@ -103,8 +103,34 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section id="about-us" className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <Image
+                src="https://placehold.co/600x500.png"
+                alt="L'équipe de GONFL'AFRIK"
+                width={600}
+                height={500}
+                className="rounded-xl shadow-lg"
+                data-ai-hint="team smiling"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">Qui Sommes-Nous ?</h2>
+              <p className="text-muted-foreground mb-6">
+                GONFL’AFRIK est une entreprise spécialisée dans la location, la vente et l’animation avec structures gonflables. Basée au Sénégal, notre mission est d’apporter de la joie, du divertissement et une touche d’originalité à tous types d’événements : anniversaires, mariages, baptêmes, kermesses, et bien plus encore.
+              </p>
+              <Button asChild size="lg">
+                <Link href="/a-propos">En Savoir Plus <Building className="ml-2" /></Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
       
-      <section id="ai-planner" className="py-16 md:py-24 bg-background">
+      <section id="ai-planner" className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
@@ -130,7 +156,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="gallery-preview" className="py-16 md:py-24 bg-secondary/30">
+      <section id="gallery-preview" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold font-headline">Moments de Joie</h2>
