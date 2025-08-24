@@ -204,5 +204,39 @@
         "join_adventure_title": "Join the GONFL'AFRIK Adventure",
         "join_adventure_text": "At GONFL’AFRIK, we believe that every party, wherever it may be in Africa, deserves to be unique and memorable. Ready to create unforgettable memories?",
         "join_adventure_cta": "Contact Us"
+    },
+    "ContactPage": {
+        "title": "Contact Us",
+        "subtitle": "Have a question? A special request? Feel free to reach out. Our team is here to help you organize the perfect event.",
+        "form_title": "Send us a message",
+        "form_description": "Fill out the form and we will get back to you.",
+        "field_name_label": "Name",
+        "field_name_placeholder": "Your name",
+        "field_email_label": "Email",
+        "field_email_placeholder": "Your email address",
+        "field_subject_label": "Subject",
+        "field_subject_placeholder": "Select a subject",
+        "subject_option1": "General Inquiry",
+        "subject_option2": "Quote Request",
+        "subject_option3": "Partnership",
+        "subject_option4": "Other",
+        "field_message_label": "Message",
+        "field_message_placeholder": "Your message...",
+        "field_captcha_label": "Security Check",
+        "field_captcha_placeholder": "What is {a} + {b}?",
+        "button_submit": "Send Message",
+        "contact_details_title": "Our Contact Details",
+        "contact_email_title": "Email",
+        "contact_phone_title": "Phone",
+        "contact_address_title": "Address",
+        "toast_success_title": "Message sent!",
+        "toast_success_description": "Thank you for contacting us. We will get back to you shortly.",
+        "error_name_required": "Name is required.",
+        "error_email_invalid": "Invalid email address.",
+        "error_subject_required": "Subject is required.",
+        "error_message_min_length": "Message must be at least 10 characters.",
+        "error_captcha_incorrect": "Incorrect answer."
     }
 }
+
+    

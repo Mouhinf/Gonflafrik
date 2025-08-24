@@ -204,5 +204,39 @@
         "join_adventure_title": "Rejoignez l'Aventure GONFL'AFRIK",
         "join_adventure_text": "Chez GONFL’AFRIK, nous croyons que chaque fête, où qu’elle soit en Afrique, mérite d’être unique et mémorable. Prêt à créer des souvenirs inoubliables ?",
         "join_adventure_cta": "Contactez-nous"
+    },
+    "ContactPage": {
+        "title": "Contactez-Nous",
+        "subtitle": "Une question ? Une demande spéciale ? N'hésitez pas à nous joindre. Notre équipe est là pour vous aider à organiser l'événement parfait.",
+        "form_title": "Envoyez-nous un message",
+        "form_description": "Remplissez le formulaire et nous vous recontacterons.",
+        "field_name_label": "Nom",
+        "field_name_placeholder": "Votre nom",
+        "field_email_label": "Email",
+        "field_email_placeholder": "Votre adresse e-mail",
+        "field_subject_label": "Sujet",
+        "field_subject_placeholder": "Sélectionnez un sujet",
+        "subject_option1": "Question générale",
+        "subject_option2": "Demande de devis",
+        "subject_option3": "Partenariat",
+        "subject_option4": "Autre",
+        "field_message_label": "Message",
+        "field_message_placeholder": "Votre message...",
+        "field_captcha_label": "Vérification de sécurité",
+        "field_captcha_placeholder": "Combien font {a} + {b} ?",
+        "button_submit": "Envoyer le message",
+        "contact_details_title": "Nos Coordonnées",
+        "contact_email_title": "Email",
+        "contact_phone_title": "Téléphone",
+        "contact_address_title": "Adresse",
+        "toast_success_title": "Message envoyé !",
+        "toast_success_description": "Merci de nous avoir contactés. Nous vous répondrons dans les plus brefs délais.",
+        "error_name_required": "Le nom est requis.",
+        "error_email_invalid": "Adresse e-mail invalide.",
+        "error_subject_required": "Le sujet est requis.",
+        "error_message_min_length": "Le message doit contenir au moins 10 caractères.",
+        "error_captcha_incorrect": "Réponse incorrecte."
     }
 }
+
+    
