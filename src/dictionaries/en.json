@@ -61,7 +61,19 @@
         "back_to_blog": "Back to blog",
         "published_on": "Published on",
         "read_more": "Read more",
-        "all_category": "All"
+        "all_category": "All",
+        "category_safety": "Safety",
+        "category_maintenance": "Maintenance",
+        "category_events": "Events",
+        "category_tips": "Tips",
+        "blog_safety_title": "Safety First: Our Tips for Inflatable Structures",
+        "blog_safety_excerpt": "Ensuring the safety of your children is our top priority. Discover our essential tips for safe and fun use of our inflatable structures.",
+        "blog_maintenance_title": "How to Maintain an Inflatable Structure After the Party",
+        "blog_maintenance_excerpt": "Proper maintenance ensures the longevity and cleanliness of our structures. Here are some tips for taking care of your rental after the event.",
+        "blog_events_title": "Events Not to Miss in Dakar This Month",
+        "blog_events_excerpt": "GONFL'AFRIK is proud to participate in local events. Find out where to find us and upcoming parties in the Dakar region.",
+        "blog_choice_title": "How to Choose the Ideal Inflatable Structure for Your Event",
+        "blog_choice_excerpt": "The choice can be difficult! This guide will help you select the perfect structure based on the age of the participants, the space, and the theme of your party."
     },
     "Inflatables": {
         "chateau_princesse_name": "Princess Castle",

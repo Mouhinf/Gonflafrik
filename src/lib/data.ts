@@ -148,37 +148,37 @@ export const featuredInflatables = inflatableCatalogue.slice(0, 3);
 export const blogPosts: BlogPost[] = [
   {
     slug: 'securite-structures-gonflables',
-    title: 'La Sécurité Avant Tout : Nos Conseils pour les Structures Gonflables',
-    excerpt: 'Assurer la sécurité de vos enfants est notre priorité absolue. Découvrez nos conseils essentiels pour une utilisation sûre et amusante de nos structures gonflables.',
+    titleKey: 'blog_safety_title',
+    excerptKey: 'blog_safety_excerpt',
     date: '2024-05-15',
-    category: 'Sécurité',
+    categoryKey: 'safety',
     image: 'https://placehold.co/600x400.png',
     hint: 'safety instructions'
   },
   {
     slug: 'entretien-apres-fete',
-    title: 'Comment Entretenir une Structure Gonflable Après la Fête',
-    excerpt: 'Un bon entretien garantit la longévité et la propreté de nos structures. Voici quelques astuces pour prendre soin de votre location après l\'événement.',
+    titleKey: 'blog_maintenance_title',
+    excerptKey: 'blog_maintenance_excerpt',
     date: '2024-05-10',
-    category: 'Entretien',
+    categoryKey: 'maintenance',
     image: 'https://placehold.co/600x400.png',
     hint: 'cleaning equipment'
   },
   {
     slug: 'evenements-dakar',
-    title: 'Les Événements à ne pas Manquer à Dakar ce Mois-ci',
-    excerpt: 'GONFL\'AFRIK est fier de participer aux événements locaux. Découvrez où nous trouver et les fêtes à venir dans la région de Dakar.',
+    titleKey: 'blog_events_title',
+    excerptKey: 'blog_events_excerpt',
     date: '2024-06-01',
-    category: 'Événements',
+    categoryKey: 'events',
     image: 'https://placehold.co/600x400.png',
     hint: 'event calendar'
   },
   {
     slug: 'choisir-structure-ideale',
-    title: 'Comment Choisir la Structure Gonflable Idéale pour Votre Événement',
-    excerpt: 'Le choix peut être difficile ! Ce guide vous aidera à sélectionner la structure parfaite en fonction de l\'âge des participants, de l\'espace et du thème de votre fête.',
+    titleKey: 'blog_choice_title',
+    excerptKey: 'blog_choice_excerpt',
     date: '2024-04-28',
-    category: 'Conseils',
+    categoryKey: 'tips',
     image: 'https://placehold.co/600x400.png',
     hint: 'decision making'
   },
@@ -195,4 +195,4 @@ export const galleryImages: GalleryImage[] = [
   { src: 'https://placehold.co/600x600.png', alt: 'Installation de nos équipes', hint: 'team setup' },
 ];
 
-export const blogCategories = ['Tous', ...Array.from(new Set(blogPosts.map(p => p.category)))];
+export const blogCategories = ['all', 'safety', 'maintenance', 'events', 'tips'];

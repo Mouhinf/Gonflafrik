@@ -24,11 +24,19 @@ export default async function BlogPostPage({ params }: { params: { slug: string,
   const dictionary = await getDictionary(params.lang);
   const t = dictionary.BlogPage;
 
-  const post = blogPosts.find((p) => p.slug === params.slug);
+  const postData = blogPosts.find((p) => p.slug === params.slug);
 
-  if (!post) {
+  if (!postData) {
     notFound();
   }
+
+  const post = {
+    ...postData,
+    title: t[postData.titleKey as keyof typeof t] || postData.titleKey,
+    excerpt: t[postData.excerptKey as keyof typeof t] || postData.excerptKey,
+    category: t[`category_${postData.categoryKey}` as keyof typeof t] || postData.categoryKey,
+  };
+
 
   const postDate = new Date(post.date);
   const formattedDate = !isNaN(postDate.getTime()) ? postDate.toLocaleDateString(params.lang, {

@@ -61,7 +61,19 @@
         "back_to_blog": "Retour au blog",
         "published_on": "Publié le",
         "read_more": "Lire plus",
-        "all_category": "Tous"
+        "all_category": "Tous",
+        "category_safety": "Sécurité",
+        "category_maintenance": "Entretien",
+        "category_events": "Événements",
+        "category_tips": "Conseils",
+        "blog_safety_title": "La Sécurité Avant Tout : Nos Conseils pour les Structures Gonflables",
+        "blog_safety_excerpt": "Assurer la sécurité de vos enfants est notre priorité absolue. Découvrez nos conseils essentiels pour une utilisation sûre et amusante de nos structures gonflables.",
+        "blog_maintenance_title": "Comment Entretenir une Structure Gonflable Après la Fête",
+        "blog_maintenance_excerpt": "Un bon entretien garantit la longévité et la propreté de nos structures. Voici quelques astuces pour prendre soin de votre location après l'événement.",
+        "blog_events_title": "Les Événements à ne pas Manquer à Dakar ce Mois-ci",
+        "blog_events_excerpt": "GONFL'AFRIK est fier de participer aux événements locaux. Découvrez où nous trouver et les fêtes à venir dans la région de Dakar.",
+        "blog_choice_title": "Comment Choisir la Structure Gonflable Idéale pour Votre Événement",
+        "blog_choice_excerpt": "Le choix peut être difficile ! Ce guide vous aidera à sélectionner la structure parfaite en fonction de l'âge des participants, de l'espace et du thème de votre fête."
     },
     "Inflatables": {
         "chateau_princesse_name": "Château de Princesse",

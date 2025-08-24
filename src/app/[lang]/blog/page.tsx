@@ -8,25 +8,27 @@ import { Input } from '@/components/ui/input';
 import { Locale } from '../../../../i18n-config';
 import { useDictionary } from '@/hooks/use-dictionary';
 
-export default function BlogPage({ params }: { params: { lang: Locale } }) {
-  const dictionary = useDictionary(params.lang);
+export default function BlogPage({ params: { lang } }: { params: { lang: Locale } }) {
+  const dictionary = useDictionary(lang);
   const t = dictionary?.BlogPage;
 
   const [searchTerm, setSearchTerm] = useState('');
-  const [category, setCategory] = useState(t?.all_category || 'Tous');
+  const [category, setCategory] = useState('all');
   const [sortOrder, setSortOrder] = useState('desc');
-
-  useEffect(() => {
-    if (t) {
-      setCategory(t.all_category);
-    }
-  }, [t]);
 
   const filteredAndSortedPosts = useMemo(() => {
     if (!t) return [];
-    return blogPosts
+    
+    const translatedPosts = blogPosts.map(post => ({
+      ...post,
+      title: t[post.titleKey] || post.titleKey,
+      excerpt: t[post.excerptKey] || post.excerptKey,
+      category: t[`category_${post.categoryKey}`] || post.categoryKey,
+    }));
+    
+    return translatedPosts
       .filter(post => 
-        (category === t.all_category || post.category === category) &&
+        (category === 'all' || post.category === category) &&
         post.title.toLowerCase().includes(searchTerm.toLowerCase())
       )
       .sort((a, b) => {
@@ -62,9 +64,9 @@ export default function BlogPage({ params }: { params: { lang: Locale } }) {
               <SelectValue placeholder={t.category_placeholder} />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value={t.all_category}>{t.all_category}</SelectItem>
-              {blogCategories.slice(1).map(cat => (
-                <SelectItem key={cat} value={cat}>{cat}</SelectItem>
+              <SelectItem value="all">{t.all_category}</SelectItem>
+              {blogCategories.slice(1).map(catKey => (
+                <SelectItem key={catKey} value={t[`category_${catKey}`]}>{t[`category_${catKey}`]}</SelectItem>
               ))}
             </SelectContent>
           </Select>
@@ -83,7 +85,7 @@ export default function BlogPage({ params }: { params: { lang: Locale } }) {
       {filteredAndSortedPosts.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredAndSortedPosts.map(post => (
-            <BlogPostCard key={post.slug} post={post} lang={params.lang} />
+            <BlogPostCard key={post.slug} post={post} lang={lang} />
           ))}
         </div>
       ) : (

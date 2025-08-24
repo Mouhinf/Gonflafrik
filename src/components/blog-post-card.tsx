@@ -8,7 +8,7 @@ import { Locale } from '../../i18n-config';
 import { useDictionary } from '@/hooks/use-dictionary';
 
 
-export function BlogPostCard({ post, lang }: { post: BlogPost, lang: Locale }) {
+export function BlogPostCard({ post, lang }: { post: any, lang: Locale }) {
   const dictionary = useDictionary(lang);
   const t = dictionary?.BlogPage;
 

@@ -11,10 +11,10 @@ export interface Inflatable {
 
 export interface BlogPost {
   slug: string;
-  title: string;
-  excerpt: string;
+  titleKey: string;
+  excerptKey: string;
   date: string;
-  category: 'Sécurité' | 'Entretien' | 'Événements' | 'Conseils';
+  categoryKey: 'safety' | 'maintenance' | 'events' | 'tips';
   image: string;
   hint: string;
 }
