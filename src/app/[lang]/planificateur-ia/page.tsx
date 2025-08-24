@@ -47,7 +47,7 @@ export default function AIPlannerPage({ params: { lang } }: { params: { lang: Lo
     setLoading(true);
     setResult(null);
     try {
-      const response = await suggestInflatableConfigurations(values);
+      const response = await suggestInflatableConfigurations({ ...values, lang });
       setResult(response);
     } catch (error) {
       console.error(t?.log_error_prefix, error);

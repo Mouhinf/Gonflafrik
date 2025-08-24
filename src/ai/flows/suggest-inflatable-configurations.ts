@@ -24,6 +24,7 @@ const SuggestInflatableConfigurationsInputSchema = z.object({
     .string()
     .optional()
     .describe('Tous détails ou préférences supplémentaires pour les configurations de structures gonflables.'),
+  lang: z.string().describe('La langue de la réponse (par exemple, "fr", "en").'),
 });
 export type SuggestInflatableConfigurationsInput = z.infer<typeof SuggestInflatableConfigurationsInputSchema>;
 
@@ -60,7 +61,7 @@ const prompt = ai.definePrompt({
   Dimensions de l'espace : {{{spaceDimensions}}}
   Détails supplémentaires : {{{additionalDetails}}}
 
-  Fournissez une description détaillée des configurations suggérées, expliquez pourquoi elles sont adaptées et estimez le coût total en Francs CFA (XOF). Assurez-vous que les estimations de coûts sont abordables et compétitives pour le marché local. Répondez uniquement en français.
+  Fournissez une description détaillée des configurations suggérées, expliquez pourquoi elles sont adaptées et estimez le coût total en Francs CFA (XOF). Assurez-vous que les estimations de coûts sont abordables et compétitives pour le marché local. Répondez uniquement dans la langue suivante : {{{lang}}}.
 `,
 });
 
