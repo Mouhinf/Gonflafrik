@@ -13,9 +13,8 @@ export default function Home() {
         <Image
           src="https://placehold.co/1800x900.png"
           alt="Structures gonflables sous un ciel ensoleillé"
-          layout="fill"
-          objectFit="cover"
-          className="absolute z-0"
+          fill
+          className="object-cover absolute z-0"
           data-ai-hint="bouncy castle festival"
           priority
         />

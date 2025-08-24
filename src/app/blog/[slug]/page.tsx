@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { blogPosts } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Calendar } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 // This function can be used by Next.js to generate static pages for each blog post at build time.
 export async function generateStaticParams() {
@@ -51,8 +52,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             <Image
                 src={post.image}
                 alt={post.title}
-                layout="fill"
-                objectFit="cover"
+                fill
+                className="object-cover"
                 data-ai-hint={post.hint}
                 priority
             />

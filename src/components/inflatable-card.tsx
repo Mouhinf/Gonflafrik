@@ -14,8 +14,8 @@ export function InflatableCard({ inflatable }: { inflatable: Inflatable }) {
           <Image
             src={inflatable.image}
             alt={inflatable.name}
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
             data-ai-hint={inflatable.hint}
           />
         </div>
