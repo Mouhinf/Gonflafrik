@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Wind, Facebook, Instagram, Twitter } from 'lucide-react';
 
@@ -19,6 +20,7 @@ export default function Footer() {
               <li><Link href="/catalogue" className="text-sm text-muted-foreground hover:text-primary">Catalogue</Link></li>
               <li><Link href="/galerie" className="text-sm text-muted-foreground hover:text-primary">Galerie</Link></li>
               <li><Link href="/blog" className="text-sm text-muted-foreground hover:text-primary">Blog</Link></li>
+              <li><Link href="/a-propos" className="text-sm text-muted-foreground hover:text-primary">À propos</Link></li>
             </ul>
           </div>
           <div>

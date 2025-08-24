@@ -18,6 +18,7 @@ const navLinks = [
   { href: '/galerie', label: 'Galerie' },
   { href: '/blog', label: 'Blog' },
   { href: '/planificateur-ia', label: 'Planificateur IA' },
+  { href: '/a-propos', label: 'À propos' },
   { href: '/contact', label: 'Contact' },
 ];
 
