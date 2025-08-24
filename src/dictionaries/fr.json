@@ -1,0 +1,41 @@
+
+{
+    "HomePage": {
+        "hero": {
+            "title": "La Fête Commence Ici avec",
+            "subtitle": "Découvrez nos incroyables structures gonflables pour des événements inoubliables au Sénégal. Parfait pour les anniversaires, les kermesses et toutes vos célébrations!",
+            "cta_catalogue": "Voir le Catalogue",
+            "cta_reserve": "Réserver Maintenant"
+        },
+        "features": {
+            "title": "Pourquoi Nous Choisir?",
+            "subtitle": "Nous offrons plus que des jeux, nous créons des souvenirs.",
+            "quality_title": "Qualité Supérieure",
+            "quality_text": "Des structures gonflables sûres, propres et conformes aux normes les plus strictes.",
+            "service_title": "Service Client Royal",
+            "service_text": "Notre équipe est dédiée à rendre votre événement parfait, de la réservation à l'installation.",
+            "planning_title": "Planification Facile",
+            "planning_text": "Utilisez notre planificateur IA pour trouver la configuration parfaite pour votre fête en quelques clics."
+        },
+        "featured_inflatables": {
+            "title": "Nos Structures Étoiles",
+            "subtitle": "Les favoris de nos clients pour un maximum de fun.",
+            "cta_explore": "Explorer Tout le Catalogue"
+        },
+        "about_us": {
+            "title": "Qui Sommes-Nous ?",
+            "text": "GONFL’AFRIK est une entreprise spécialisée dans la location, la vente et l’animation avec structures gonflables. Basée au Sénégal, notre mission est d’apporter de la joie, du divertissement et une touche d’originalité à tous types d’événements : anniversaires, mariages, baptêmes, kermesses, et bien plus encore.",
+            "cta_learn_more": "En Savoir Plus"
+        },
+        "ai_planner": {
+            "title": "Planifiez l'Événement Parfait avec l'IA",
+            "text": "Vous ne savez pas par où commencer? Notre assistant intelligent vous recommande les meilleures structures gonflables en fonction de votre type d'événement, du groupe d'âge et de l'espace disponible. Simplifiez votre organisation et garantissez le succès de votre fête.",
+            "cta_try_planner": "Essayer le Planificateur IA"
+        },
+        "gallery_preview": {
+            "title": "Moments de Joie",
+            "subtitle": "Voyez le bonheur en action dans notre galerie d'événements passés.",
+            "cta_visit_gallery": "Visiter la Galerie Complète"
+        }
+    }
+}

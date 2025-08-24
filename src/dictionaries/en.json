@@ -1,0 +1,41 @@
+
+{
+    "HomePage": {
+        "hero": {
+            "title": "The Party Starts Here with",
+            "subtitle": "Discover our incredible inflatable structures for unforgettable events in Senegal. Perfect for birthdays, fairs, and all your celebrations!",
+            "cta_catalogue": "See the Catalogue",
+            "cta_reserve": "Book Now"
+        },
+        "features": {
+            "title": "Why Choose Us?",
+            "subtitle": "We offer more than games, we create memories.",
+            "quality_title": "Superior Quality",
+            "quality_text": "Safe, clean, and compliant inflatable structures that meet the highest standards.",
+            "service_title": "Royal Customer Service",
+            "service_text": "Our team is dedicated to making your event perfect, from booking to installation.",
+            "planning_title": "Easy Planning",
+            "planning_text": "Use our AI planner to find the perfect setup for your party in just a few clicks."
+        },
+        "featured_inflatables": {
+            "title": "Our Star Structures",
+            "subtitle": "Our customers' favorites for maximum fun.",
+            "cta_explore": "Explore the Full Catalogue"
+        },
+        "about_us": {
+            "title": "Who Are We?",
+            "text": "GONFL'AFRIK is a company specializing in the rental, sale, and entertainment with inflatable structures. Based in Senegal, our mission is to bring joy, entertainment, and a touch of originality to all types of events: birthdays, weddings, baptisms, fairs, and much more.",
+            "cta_learn_more": "Learn More"
+        },
+        "ai_planner": {
+            "title": "Plan the Perfect Event with AI",
+            "text": "Not sure where to start? Our smart assistant recommends the best inflatable structures based on your event type, age group, and available space. Simplify your organization and ensure the success of your party.",
+            "cta_try_planner": "Try the AI Planner"
+        },
+        "gallery_preview": {
+            "title": "Moments of Joy",
+            "subtitle": "See happiness in action in our gallery of past events.",
+            "cta_visit_gallery": "Visit the Full Gallery"
+        }
+    }
+}
