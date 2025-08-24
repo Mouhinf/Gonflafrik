@@ -90,7 +90,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string,
             <p>
                 {post.content2}
             </p>
-            <h3 className="font-headline text-3xl mt-12 mb-4 !text-foreground">Un sous-titre pour l'exemple</h3>
+            <h3 className="font-headline text-3xl mt-12 mb-4 !text-foreground">{t.blog_post_subtitle_example}</h3>
             <p>
                 Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
             </p>
