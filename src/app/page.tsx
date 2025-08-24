@@ -22,7 +22,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/50 z-10" />
         <div className="relative z-20 p-4 flex flex-col items-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold font-headline mb-4 drop-shadow-lg">
-            La Fête Commence Ici avec <span className="text-primary">Afrikaboom</span>!
+            La Fête Commence Ici avec <span className="text-primary">GONFL'AFRIK</span>!
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mb-8 drop-shadow-md">
             Découvrez nos incroyables structures gonflables pour des événements inoubliables au Sénégal. Parfait pour les anniversaires, les kermesses et toutes vos célébrations!

@@ -6,7 +6,7 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 
 export const metadata: Metadata = {
-  title: 'Afrikaboom - Location de Structures Gonflables',
+  title: 'GONFL\'AFRIK - Location de Structures Gonflables',
   description: 'Spécialiste de la location de châteaux et jeux gonflables pour tous vos événements.',
 };
 

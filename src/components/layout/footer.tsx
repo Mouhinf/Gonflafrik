@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <Wind className="h-8 w-8 text-primary" />
-              <span className="text-2xl font-bold font-headline text-primary">Afrikaboom</span>
+              <span className="text-2xl font-bold font-headline text-primary">GONFL'AFRIK</span>
             </Link>
             <p className="text-sm text-muted-foreground">Créateurs de joie et d'événements inoubliables.</p>
           </div>
@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Afrikaboom. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} GONFL'AFRIK. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

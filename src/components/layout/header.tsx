@@ -45,7 +45,7 @@ export default function Header() {
       <div className="container flex h-16 max-w-screen-2xl items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Wind className="h-8 w-8 text-primary" />
-          <span className="font-bold text-2xl font-headline text-primary">Afrikaboom</span>
+          <span className="font-bold text-2xl font-headline text-primary">GONFL'AFRIK</span>
         </Link>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
           {navLinks.map((link) => (
@@ -81,7 +81,7 @@ export default function Header() {
               <nav className="flex flex-col gap-6 text-lg font-medium mt-10">
                 <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4">
                   <Wind className="h-8 w-8 text-primary" />
-                  <span className="font-bold text-2xl font-headline text-primary">Afrikaboom</span>
+                  <span className="font-bold text-2xl font-headline text-primary">GONFL'AFRIK</span>
                 </Link>
                 {navLinks.map((link) => (
                     <SheetClose key={link.href} asChild>

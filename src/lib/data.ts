@@ -87,7 +87,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'evenements-dakar',
     title: 'Les Événements à ne pas Manquer à Dakar ce Mois-ci',
-    excerpt: 'Afrikaboom est fier de participer aux événements locaux. Découvrez où nous trouver et les fêtes à venir dans la région de Dakar.',
+    excerpt: 'GONFL\'AFRIK est fier de participer aux événements locaux. Découvrez où nous trouver et les fêtes à venir dans la région de Dakar.',
     date: '2024-06-01',
     category: 'Événements',
     image: 'https://placehold.co/600x400.png',

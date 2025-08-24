@@ -7,7 +7,7 @@ export default function GalleryPage() {
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-extrabold font-headline">Galerie des Moments Inoubliables</h1>
         <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-          Plongez dans l'univers joyeux d'Afrikaboom. Chaque image capture un éclat de rire, un saut de joie et un souvenir précieux.
+          Plongez dans l'univers joyeux de GONFL'AFRIK. Chaque image capture un éclat de rire, un saut de joie et un souvenir précieux.
         </p>
       </div>
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">

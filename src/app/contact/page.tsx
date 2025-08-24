@@ -139,7 +139,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 className="font-semibold">Email</h4>
-                <p className="text-muted-foreground">contact@afrikaboom.sn</p>
+                <p className="text-muted-foreground">contact@gonflafrik.sn</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
