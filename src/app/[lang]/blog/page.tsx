@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { blogPosts, blogCategories } from '@/lib/data';
 import { BlogPostCard } from '@/components/blog-post-card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -8,13 +8,19 @@ import { Input } from '@/components/ui/input';
 import { Locale } from '../../../../i18n-config';
 import { useDictionary } from '@/hooks/use-dictionary';
 
-export default function BlogPage({ params: { lang } }: { params: { lang: Locale } }) {
-  const dictionary = useDictionary(lang);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [category, setCategory] = useState('Tous');
-  const [sortOrder, setSortOrder] = useState('desc');
-  
+export default function BlogPage({ params }: { params: { lang: Locale } }) {
+  const dictionary = useDictionary(params.lang);
   const t = dictionary?.BlogPage;
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [category, setCategory] = useState(t?.all_category || 'Tous');
+  const [sortOrder, setSortOrder] = useState('desc');
+
+  useEffect(() => {
+    if (t) {
+      setCategory(t.all_category);
+    }
+  }, [t]);
 
   const filteredAndSortedPosts = useMemo(() => {
     if (!t) return [];
@@ -77,7 +83,7 @@ export default function BlogPage({ params: { lang } }: { params: { lang: Locale 
       {filteredAndSortedPosts.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredAndSortedPosts.map(post => (
-            <BlogPostCard key={post.slug} post={post} lang={lang} />
+            <BlogPostCard key={post.slug} post={post} lang={params.lang} />
           ))}
         </div>
       ) : (
