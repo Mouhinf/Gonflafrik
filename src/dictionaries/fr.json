@@ -183,5 +183,26 @@
         "ai_planner": "Planificateur IA",
         "follow_us": "Suivez-nous",
         "rights_reserved": "Tous droits réservés."
+    },
+    "AboutPage": {
+        "title_part1": "À Propos de",
+        "title_part2": "GONFL'AFRIK",
+        "logo_alt": "Logo GONFL'AFRIK",
+        "subtitle1": "GONFL’AFRIK est une entreprise spécialisée dans la location, la vente et l’animation avec structures gonflables. Basée au Sénégal, notre mission est d’apporter de la joie, du divertissement et une touche d’originalité à tous types d’événements : anniversaires, mariages, baptêmes, kermesses, fêtes scolaires, événements d’entreprise, dîners de gala et bien plus encore.",
+        "subtitle2": "Nous mettons un point d’honneur à garantir sécurité, qualité et créativité, afin que chaque moment passé avec nos structures soit une expérience inoubliable.",
+        "perspectives_title": "🎯 Nos perspectives",
+        "panafrican_expansion_title": "Expansion Panafricaine",
+        "panafrican_expansion_text": "Élargir nos services à travers toute l’Afrique, pour être un acteur majeur de l’animation événementielle sur le continent.",
+        "continuous_innovation_title": "Innovation Continue",
+        "continuous_innovation_text": "Proposer des structures innovantes et thématiques, adaptées à la diversité culturelle africaine.",
+        "turnkey_solutions_title": "Solutions Clés en Main",
+        "turnkey_solutions_text": "Offrir des solutions complètes pour l’organisation d’événements, allant de l’animation à la décoration.",
+        "strategic_partnerships_title": "Partenariats Stratégiques",
+        "strategic_partnerships_text": "Nouer des partenariats avec des écoles, entreprises, et institutions à travers l’Afrique.",
+        "african_creativity_title": "Créativité Africaine",
+        "african_creativity_text": "Valoriser la créativité locale en développant des designs inspirés de notre culture et de nos traditions.",
+        "join_adventure_title": "Rejoignez l'Aventure GONFL'AFRIK",
+        "join_adventure_text": "Chez GONFL’AFRIK, nous croyons que chaque fête, où qu’elle soit en Afrique, mérite d’être unique et mémorable. Prêt à créer des souvenirs inoubliables ?",
+        "join_adventure_cta": "Contactez-nous"
     }
 }
