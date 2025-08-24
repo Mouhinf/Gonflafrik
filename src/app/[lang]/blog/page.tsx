@@ -41,7 +41,7 @@ export default function BlogPage({ params }: { params: { lang: Locale } }) {
       .sort((a, b) => {
         const dateA = new Date(a.date).getTime();
         const dateB = new Date(b.date).getTime();
-        return sortOrder === 'asc' ? dateA - dateB : dateB - dateA;
+        return sortOrder === 'asc' ? dateA - dateB : dateB - a;
       });
   }, [searchTerm, category, sortOrder, t]);
 
