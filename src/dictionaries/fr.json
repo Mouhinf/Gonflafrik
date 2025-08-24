@@ -87,5 +87,19 @@
         "category_evenements": "Structures pour événements",
         "category_promotionnelles": "Structures promotionnelles",
         "cta_book_now": "Réserver maintenant"
+    },
+    "Footer": {
+        "tagline": "Créateurs de joie et d'événements inoubliables.",
+        "navigation": "Navigation",
+        "catalogue": "Catalogue",
+        "gallery": "Galerie",
+        "blog": "Blog",
+        "about": "À propos",
+        "support": "Assistance",
+        "contact_us": "Contactez-nous",
+        "book_now": "Réserver",
+        "ai_planner": "Planificateur IA",
+        "follow_us": "Suivez-nous",
+        "rights_reserved": "Tous droits réservés."
     }
 }

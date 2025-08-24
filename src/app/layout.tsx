@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
-import { i18n } from '../../i18n-config';
+import { i18n, type Locale } from '../../i18n-config';
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
@@ -20,7 +20,7 @@ export default function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { lang: string };
+  params: { lang: Locale };
 }>) {
   return (
     <html lang={params.lang} suppressHydrationWarning>
@@ -33,7 +33,7 @@ export default function RootLayout({
         <div className="relative flex min-h-dvh flex-col">
           <Header />
           <main className="flex-1">{children}</main>
-          <Footer />
+          <Footer lang={params.lang} />
         </div>
         <Toaster />
       </body>
