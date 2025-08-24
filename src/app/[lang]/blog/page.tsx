@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useMemo } from 'react';
@@ -5,10 +6,11 @@ import { blogPosts, blogCategories } from '@/lib/data';
 import { BlogPostCard } from '@/components/blog-post-card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Input } from '@/components/ui/input';
-import { Locale } from '../../../../i18n-config';
+import { Locale } from '../../../../i1-config';
 import { useDictionary } from '@/hooks/use-dictionary';
 
-export default function BlogPage({ params: { lang } }: { params: { lang: Locale } }) {
+export default function BlogPage({ params }: { params: { lang: Locale } }) {
+  const { lang } = params;
   const dictionary = useDictionary(lang);
   const [searchTerm, setSearchTerm] = useState('');
   const [category, setCategory] = useState('Tous');
