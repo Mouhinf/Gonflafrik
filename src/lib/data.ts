@@ -153,7 +153,10 @@ export const blogPosts: BlogPost[] = [
     date: '2024-05-15',
     categoryKey: 'safety',
     image: 'https://placehold.co/600x400.png',
-    hint: 'safety instructions'
+    hint: 'safety instructions',
+    contentKey: 'blog_safety_content',
+    contentKey2: 'blog_safety_content2',
+    contentKey3: 'blog_safety_content3'
   },
   {
     slug: 'entretien-apres-fete',
@@ -162,7 +165,10 @@ export const blogPosts: BlogPost[] = [
     date: '2024-05-10',
     categoryKey: 'maintenance',
     image: 'https://placehold.co/600x400.png',
-    hint: 'cleaning equipment'
+    hint: 'cleaning equipment',
+    contentKey: 'blog_maintenance_content',
+    contentKey2: 'blog_maintenance_content2',
+    contentKey3: 'blog_maintenance_content3'
   },
   {
     slug: 'evenements-dakar',
@@ -171,7 +177,10 @@ export const blogPosts: BlogPost[] = [
     date: '2024-06-01',
     categoryKey: 'events',
     image: 'https://placehold.co/600x400.png',
-    hint: 'event calendar'
+    hint: 'event calendar',
+    contentKey: 'blog_events_content',
+    contentKey2: 'blog_events_content2',
+    contentKey3: 'blog_events_content3'
   },
   {
     slug: 'choisir-structure-ideale',
@@ -180,7 +189,10 @@ export const blogPosts: BlogPost[] = [
     date: '2024-04-28',
     categoryKey: 'tips',
     image: 'https://placehold.co/600x400.png',
-    hint: 'decision making'
+    hint: 'decision making',
+    contentKey: 'blog_choice_content',
+    contentKey2: 'blog_choice_content2',
+    contentKey3: 'blog_choice_content3'
   },
 ];
 

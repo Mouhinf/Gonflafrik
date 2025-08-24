@@ -17,6 +17,9 @@ export interface BlogPost {
   categoryKey: 'safety' | 'maintenance' | 'events' | 'tips';
   image: string;
   hint: string;
+  contentKey: string;
+  contentKey2: string;
+  contentKey3: string;
 }
 
 export interface GalleryImage {

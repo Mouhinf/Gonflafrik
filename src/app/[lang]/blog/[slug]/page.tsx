@@ -37,6 +37,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string,
     category: t[`category_${postData.categoryKey}` as keyof typeof t] || postData.categoryKey,
     content: t[postData.contentKey as keyof typeof t] || postData.contentKey,
     content2: t[postData.contentKey2 as keyof typeof t] || postData.contentKey2,
+    content3: t[postData.contentKey3 as keyof typeof t] || postData.contentKey3,
   };
 
 
@@ -92,7 +93,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string,
             </p>
             <h3 className="font-headline text-3xl mt-12 mb-4 !text-foreground">{t.blog_post_subtitle_example}</h3>
             <p>
-                Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+                {post.content3}
             </p>
             <blockquote className="border-l-4 border-primary pl-6 italic text-muted-foreground my-8">
                 "La meilleure façon de prédire l'avenir est de le créer." - Abraham Lincoln (à titre d'exemple)
