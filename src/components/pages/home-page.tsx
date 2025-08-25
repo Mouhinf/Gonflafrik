@@ -20,7 +20,7 @@ export default function HomePage({ dictionary, lang }: { dictionary: any, lang: 
           muted 
           playsInline 
           className="absolute z-0 w-full h-full object-cover"
-          poster="https://images.unsplash.com/photo-1527440398999-4a73f17b961c?q=80&w=1800&h=900&fit=crop"
+          poster="https://images.unsplash.com/photo-1527440398999-4a73f17b961c?q=80&w=1800&h=900&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         >
           {/* Vous pouvez ajouter la source de votre vidéo ici, par exemple :
           <source src="/videos/hero-video.mp4" type="video/mp4" /> 
@@ -117,7 +117,7 @@ export default function HomePage({ dictionary, lang }: { dictionary: any, lang: 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <Image
-                src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=600&h=500&fit=crop"
+                src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=600&h=500&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="L'équipe de GONFL'AFRIK"
                 width={600}
                 height={500}
@@ -152,7 +152,7 @@ export default function HomePage({ dictionary, lang }: { dictionary: any, lang: 
             </div>
             <div className="order-1 md:order-2">
               <Image
-                src="https://images.unsplash.com/photo-1678483783401-27d8355a2988?q=80&w=600&h=500&fit=crop"
+                src="https://images.unsplash.com/photo-1678483783401-27d8355a2988?q=80&w=600&h=500&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Illustration de l'intelligence artificielle"
                 width={600}
                 height={500}

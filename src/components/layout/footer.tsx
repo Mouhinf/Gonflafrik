@@ -15,7 +15,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <Link href={`/${lang}`} className="flex items-center space-x-2 mb-4">
-              <Image src="https://images.unsplash.com/photo-1543322749-a3d89d718a3d?q=80&w=40&h=40&fit=crop" alt="GONFL'AFRIK Logo" width={40} height={40} data-ai-hint="company logo" className="rounded-full" />
+              <Image src="https://images.unsplash.com/photo-1618762148934-3262b8374a4c?q=80&w=40&h=40&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="GONFL'AFRIK Logo" width={40} height={40} data-ai-hint="company logo" className="rounded-full" />
               <span className="text-2xl font-bold font-headline text-primary">GONFL'AFRIK</span>
             </Link>
             <p className="text-sm text-muted-foreground">{t.tagline}</p>
