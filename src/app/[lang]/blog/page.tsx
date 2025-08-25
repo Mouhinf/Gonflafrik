@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useMemo, useEffect, use } from 'react';
+import { useState, useMemo, useEffect } from 'react';
+import { useParams } from 'next/navigation';
 import { blogPosts, blogCategories } from '@/lib/data';
 import { BlogPostCard } from '@/components/blog-post-card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -8,8 +9,9 @@ import { Input } from '@/components/ui/input';
 import { Locale } from '../../../../i18n-config';
 import { useDictionary } from '@/hooks/use-dictionary';
 
-export default function BlogPage({ params }: { params: { lang: Locale } }) {
-  const { lang } = params;
+export default function BlogPage() {
+  const params = useParams();
+  const lang = params.lang as Locale;
   const dictionary = useDictionary(lang);
   const t = dictionary?.BlogPage;
 
