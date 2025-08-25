@@ -14,7 +14,7 @@ export default async function AboutPage({ params: { lang } }: { params: { lang: 
       <div className="text-center mb-16">
         <div className="flex justify-center mb-8">
             <Image 
-                src="https://placehold.co/200x200.png" 
+                src="https://images.unsplash.com/photo-1543322749-a3d89d718a3d?q=80&w=200&h=200&fit=crop" 
                 alt={t.logo_alt}
                 width={150} 
                 height={150}
