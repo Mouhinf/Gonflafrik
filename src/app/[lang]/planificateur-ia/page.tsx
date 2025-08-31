@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { suggestInflatableConfigurations, SuggestInflatableConfigurationsOutput } from '@/ai/flows/suggest-inflatable-configurations';
+import { useParams } from 'next/navigation';
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -17,7 +18,9 @@ import { useToast } from '@/hooks/use-toast';
 import { useDictionary } from '@/hooks/use-dictionary';
 import { Locale } from '../../../../i18n-config';
 
-export default function AIPlannerPage({ params: { lang } }: { params: { lang: Locale } }) {
+export default function AIPlannerPage() {
+  const params = useParams();
+  const lang = params.lang as Locale;
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<SuggestInflatableConfigurationsOutput | null>(null);
   const { toast } = useToast();
