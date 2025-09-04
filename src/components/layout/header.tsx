@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import Image from 'next/image';
+import ResponsiveImage from '@/components/responsive-image';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { Menu, Globe } from 'lucide-react';
@@ -63,7 +63,7 @@ export default function Header() {
       <div className="container flex h-16 max-w-screen-2xl items-center">
         <Link href={`/${lang}`} className="mr-6 flex items-center space-x-2">
           <div className="relative w-10 h-10 rounded-full overflow-hidden">
-            <Image src="https://images.unsplash.com/photo-1618762148934-3262b8374a4c?q=80&w=40&h=40&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="GONFL'AFRIK Logo" fill className="object-cover" data-ai-hint="company logo" />
+            <ResponsiveImage src="https://via.placeholder.com/40" alt="GONFL'AFRIK Logo" fill className="object-cover" data-ai-hint="company logo" />
           </div>
           <span className="font-bold text-2xl font-headline text-primary">GONFL'AFRIK</span>
         </Link>
@@ -105,7 +105,7 @@ export default function Header() {
               <nav className="flex flex-col gap-6 text-lg font-medium mt-10">
                 <Link href={`/${lang}`} className="flex items-center gap-2 text-lg font-semibold mb-4">
                    <div className="relative w-10 h-10 rounded-full overflow-hidden">
-                    <Image src="https://images.unsplash.com/photo-1618762148934-3262b8374a4c?q=80&w=40&h=40&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="GONFL'AFRIK Logo" fill className="object-cover" data-ai-hint="company logo" />
+                    <ResponsiveImage src="https://via.placeholder.com/40" alt="GONFL'AFRIK Logo" fill className="object-cover" data-ai-hint="company logo" />
                   </div>
                   <span className="font-bold text-2xl font-headline text-primary">GONFL'AFRIK</span>
                 </Link>
