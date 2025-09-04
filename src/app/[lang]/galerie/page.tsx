@@ -17,12 +17,11 @@ export default async function GalleryPage({ params: { lang } }: { params: { lang
       </div>
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
         {galleryImages.map((image, index) => (
-          <div key={index} className="overflow-hidden rounded-lg shadow-lg break-inside-avoid">
+          <div key={index} className="overflow-hidden rounded-lg shadow-lg break-inside-avoid relative aspect-[4/5]">
             <Image
               src={image.src}
               alt={image.alt}
-              width={500}
-              height={500}
+              fill
               className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
               data-ai-hint={image.hint}
             />

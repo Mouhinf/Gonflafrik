@@ -115,13 +115,12 @@ export default function HomePage({ dictionary, lang }: { dictionary: any, lang: 
       <section id="about-us" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="relative aspect-square md:aspect-[6/5] w-full h-auto rounded-xl shadow-lg overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=600&h=500&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="L'équipe de GONFL'AFRIK"
-                width={600}
-                height={500}
-                className="rounded-xl shadow-lg"
+                fill
+                className="object-cover"
                 data-ai-hint="team smiling"
               />
             </div>
@@ -150,13 +149,12 @@ export default function HomePage({ dictionary, lang }: { dictionary: any, lang: 
                 <Link href={`/${lang}/planificateur-ia`}>{t.ai_planner.cta_try_planner} <Bot className="ml-2" /></Link>
               </Button>
             </div>
-            <div className="order-1 md:order-2">
+            <div className="order-1 md:order-2 relative aspect-square md:aspect-[6/5] w-full h-auto rounded-xl shadow-lg overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1678483783401-27d8355a2988?q=80&w=600&h=500&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Illustration de l'intelligence artificielle"
-                width={600}
-                height={500}
-                className="rounded-xl shadow-lg"
+                fill
+                className="object-cover"
                 data-ai-hint="robot thinking"
               />
             </div>
@@ -174,13 +172,12 @@ export default function HomePage({ dictionary, lang }: { dictionary: any, lang: 
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {galleryImages.slice(0, 4).map((image, index) => (
-              <div key={index} className="overflow-hidden rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+              <div key={index} className="relative aspect-square overflow-hidden rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                   data-ai-hint={image.hint}
                 />
               </div>

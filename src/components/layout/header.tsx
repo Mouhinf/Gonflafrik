@@ -62,7 +62,9 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center">
         <Link href={`/${lang}`} className="mr-6 flex items-center space-x-2">
-          <Image src="https://images.unsplash.com/photo-1618762148934-3262b8374a4c?q=80&w=40&h=40&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="GONFL'AFRIK Logo" width={40} height={40} data-ai-hint="company logo" className="rounded-full" />
+          <div className="relative w-10 h-10 rounded-full overflow-hidden">
+            <Image src="https://images.unsplash.com/photo-1618762148934-3262b8374a4c?q=80&w=40&h=40&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="GONFL'AFRIK Logo" fill className="object-cover" data-ai-hint="company logo" />
+          </div>
           <span className="font-bold text-2xl font-headline text-primary">GONFL'AFRIK</span>
         </Link>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -102,7 +104,9 @@ export default function Header() {
             <SheetContent side="right">
               <nav className="flex flex-col gap-6 text-lg font-medium mt-10">
                 <Link href={`/${lang}`} className="flex items-center gap-2 text-lg font-semibold mb-4">
-                  <Image src="https://images.unsplash.com/photo-1618762148934-3262b8374a4c?q=80&w=40&h=40&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="GONFL'AFRIK Logo" width={40} height={40} data-ai-hint="company logo" className="rounded-full" />
+                   <div className="relative w-10 h-10 rounded-full overflow-hidden">
+                    <Image src="https://images.unsplash.com/photo-1618762148934-3262b8374a4c?q=80&w=40&h=40&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="GONFL'AFRIK Logo" fill className="object-cover" data-ai-hint="company logo" />
+                  </div>
                   <span className="font-bold text-2xl font-headline text-primary">GONFL'AFRIK</span>
                 </Link>
                 {navLinks.map((link) => (

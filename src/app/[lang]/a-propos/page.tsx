@@ -12,13 +12,12 @@ export default async function AboutPage({ params: { lang } }: { params: { lang: 
   return (
     <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
-        <div className="flex justify-center mb-8">
+        <div className="relative w-[150px] h-[150px] mx-auto mb-8 rounded-full overflow-hidden">
             <Image 
                 src="https://images.unsplash.com/photo-1618762148934-3262b8374a4c?q=80&w=200&h=200&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt={t.logo_alt}
-                width={150} 
-                height={150}
-                className="rounded-full"
+                fill
+                className="object-cover"
                 data-ai-hint="company logo"
             />
         </div>
