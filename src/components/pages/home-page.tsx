@@ -20,7 +20,7 @@ export default function HomePage({ dictionary, lang }: { dictionary: any, lang: 
           muted 
           playsInline 
           className="absolute z-0 w-full h-full object-cover"
-          poster="/chatprinc.jpeg"
+          poster="/chatprinc.webp"
         >
           {/* Vous pouvez ajouter la source de votre vidéo ici, par exemple :
           <source src="/videos/hero-video.mp4" type="video/mp4" /> 
@@ -117,7 +117,7 @@ export default function HomePage({ dictionary, lang }: { dictionary: any, lang: 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative aspect-square md:aspect-[6/5] w-full h-auto rounded-xl shadow-lg overflow-hidden">
               <Image
-                src="/chatprinc.jpeg"
+                src="/chatprinc.webp"
                 alt="L'équipe de GONFL'AFRIK"
                 fill
                 className="object-cover"
@@ -151,7 +151,7 @@ export default function HomePage({ dictionary, lang }: { dictionary: any, lang: 
             </div>
             <div className="order-1 md:order-2 relative aspect-square md:aspect-[6/5] w-full h-auto rounded-xl shadow-lg overflow-hidden">
               <Image
-                src="/chatprinc.jpeg"
+                src="/chatprinc.webp"
                 alt="Illustration de l'intelligence artificielle"
                 fill
                 className="object-cover"

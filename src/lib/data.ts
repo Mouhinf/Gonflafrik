@@ -5,7 +5,7 @@ export const inflatableCatalogue: Inflatable[] = [
     id: 'chateau-princesse',
     name: 'chateau_princesse_name',
     description: 'chateau_princesse_desc',
-    image: '/chatprinc.jpeg',
+    image: 'chatprinc.webp',
     ageSuitability: 'age_3_8',
     features: ['Toboggan intégré', 'Zone de saut spacieuse', 'Filets de sécurité'],
     category: 'ludiques',

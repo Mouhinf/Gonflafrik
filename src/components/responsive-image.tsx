@@ -38,7 +38,7 @@ export default function ResponsiveImage({ src, alt, ...props }: ResponsiveImageP
   }
 
   // Local image: assume it's in the /public folder
-  const localSrc = `/images/${imageSrc}`;
+  const localSrc = `/${imageSrc}`;
 
   return (
     <Image
